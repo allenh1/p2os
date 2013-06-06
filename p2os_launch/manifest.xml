@@ -1,0 +1,14 @@
+<package>
+  <description brief="p2os_launch">
+
+     This package contains launch and config files designed for use with the p2os stack.
+
+  </description>
+  <author>Edward Kaszubski</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/launch</url>
+
+</package>
+
+
