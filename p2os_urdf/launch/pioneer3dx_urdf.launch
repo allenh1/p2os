@@ -1,0 +1,14 @@
+<launch>
+	<include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"/>
+
+  	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+
+    	<param name="publish_frequency" type="double" value="30.0"/>
+
+    	<param name="tf_prefix" type="string" value=""/>
+  	</node>
+
+	<node pkg="p2os_urdf" type="publisher" name="publisher"/>
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_odom" args="0 0 0 0 0 0 odom base_link 100" />
+	<node pkg="tf" type="static_transform_publisher" name="odom_to_map" args="0 0 0 0 0 0 map odom 100"/>
+</launch>

@@ -1,0 +1,461 @@
+17:25:49: Creating resource group General
+17:25:49: Creating resource group Internal
+17:25:49: Creating resource group Autodetect
+17:25:49: SceneManagerFactory for type 'DefaultSceneManager' registered.
+17:25:49: Registering ResourceManager for type Material
+17:25:49: Registering ResourceManager for type Mesh
+17:25:49: Registering ResourceManager for type Skeleton
+17:25:49: MovableObjectFactory for type 'ParticleSystem' registered.
+17:25:49: OverlayElementFactory for type Panel registered.
+17:25:49: OverlayElementFactory for type BorderPanel registered.
+17:25:49: OverlayElementFactory for type TextArea registered.
+17:25:49: Registering ResourceManager for type Font
+17:25:49: ArchiveFactory for archive type FileSystem registered.
+17:25:49: ArchiveFactory for archive type Zip registered.
+17:25:49: FreeImage version: 3.10.0
+17:25:49: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+17:25:49: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2
+17:25:49: DDS codec registering
+17:25:49: Registering ResourceManager for type HighLevelGpuProgram
+17:25:49: Registering ResourceManager for type Compositor
+17:25:49: MovableObjectFactory for type 'Entity' registered.
+17:25:49: MovableObjectFactory for type 'Light' registered.
+17:25:49: MovableObjectFactory for type 'BillboardSet' registered.
+17:25:49: MovableObjectFactory for type 'ManualObject' registered.
+17:25:49: MovableObjectFactory for type 'BillboardChain' registered.
+17:25:49: MovableObjectFactory for type 'RibbonTrail' registered.
+17:25:49: *-*-* OGRE Initialising
+17:25:49: *-*-* Version 1.6.3 (Shoggoth)
+17:25:49: Loading library RenderSystem_GL
+17:25:49: Installing plugin: GL RenderSystem
+17:25:49: OpenGL Rendering Subsystem created.
+17:25:49: Plugin successfully installed
+17:25:49: Loading library Plugin_OctreeSceneManager
+17:25:49: Installing plugin: Octree & Terrain Scene Manager
+17:25:49: Plugin successfully installed
+17:25:49: Loading library Plugin_ParticleFX
+17:25:49: Installing plugin: ParticleFX
+17:25:49: Particle Emitter Type 'Point' registered
+17:25:49: Particle Emitter Type 'Box' registered
+17:25:49: Particle Emitter Type 'Ellipsoid' registered
+17:25:49: Particle Emitter Type 'Cylinder' registered
+17:25:49: Particle Emitter Type 'Ring' registered
+17:25:49: Particle Emitter Type 'HollowEllipsoid' registered
+17:25:49: Particle Affector Type 'LinearForce' registered
+17:25:49: Particle Affector Type 'ColourFader' registered
+17:25:49: Particle Affector Type 'ColourFader2' registered
+17:25:49: Particle Affector Type 'ColourImage' registered
+17:25:49: Particle Affector Type 'ColourInterpolator' registered
+17:25:49: Particle Affector Type 'Scaler' registered
+17:25:49: Particle Affector Type 'Rotator' registered
+17:25:49: Particle Affector Type 'DirectionRandomiser' registered
+17:25:49: Particle Affector Type 'DeflectorPlane' registered
+17:25:49: Plugin successfully installed
+17:25:49: Loading library Plugin_CgProgramManager
+17:25:49: Installing plugin: Cg Program Manager
+17:25:49: Plugin successfully installed
+17:25:49: CPU Identifier & Features
+17:25:49: -------------------------
+17:25:49:  *   CPU ID: GenuineIntel: Intel(R) Core(TM)2 Duo CPU     T9300  @ 2.50GHz
+17:25:49:  *      SSE: yes
+17:25:49:  *     SSE2: yes
+17:25:49:  *     SSE3: yes
+17:25:49:  *      MMX: yes
+17:25:49:  *   MMXEXT: yes
+17:25:49:  *    3DNOW: no
+17:25:49:  * 3DNOWEXT: no
+17:25:49:  *     CMOV: yes
+17:25:49:  *      TSC: yes
+17:25:49:  *      FPU: yes
+17:25:49:  *      PRO: yes
+17:25:49:  *       HT: no
+17:25:49: -------------------------
+17:25:49: ******************************
+*** Starting GLX Subsystem ***
+******************************
+17:25:49: Creating resource group ogre_tools
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media/fonts' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media/models' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media/materials' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media/materials/scripts' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization_common/ogre_tools/media/materials/programs' of type 'FileSystem' to resource group 'ogre_tools'
+17:25:49: GLRenderSystem::_createRenderWindow "OgreRenderWindow1", 911x634 windowed  miscParams: externalWindowHandle=27050496:0:18874452:29332016 
+17:25:49: GLXWindow::create: The externalWindowHandle parameter is deprecated.
+Use the parentWindowHandle or currentGLContext parameter instead.
+17:25:49: GLXWindow::create used FBConfigID = 173
+17:25:49: GL_VERSION = 2.1 Mesa 7.7.1
+17:25:49: GL_VENDOR = Mesa Project
+17:25:49: GL_RENDERER = Software Rasterizer
+17:25:49: GL_EXTENSIONS = GL_EXT_compiled_vertex_array GL_EXT_texture_env_add GL_ARB_copy_buffer GL_ARB_depth_texture GL_ARB_depth_clamp GL_ARB_draw_buffers GL_ARB_draw_elements_base_vertex GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_half_float_pixel GL_ARB_imaging GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_provoking_vertex GL_ARB_shader_objects GL_ARB_shading_language_100 GL_ARB_shading_language_120 GL_ARB_shadow GL_ARB_shadow_ambient GL_ARB_sync GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_mirrored_repeat GL_ARB_texture_non_power_of_two GL_ARB_texture_rectangle GL_ARB_transpose_matrix GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_window_pos GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_logic_op GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_convolution GL_EXT_copy_texture GL_EXT_depth_bounds_test GL_EXT_draw_range_elements GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_object GL_EXT_fog_coord GL_EXT_gpu_program_parameters GL_EXT_histogram GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_pixels GL_EXT_paletted_texture GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_shared_texture_palette GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_subtexture GL_EXT_texture GL_EXT_texture3D GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_texture_swizzle GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_3DFX_texture_compression_FXT1 GL_APPLE_packed_pixels GL_APPLE_vertex_array_object GL_ATI_blend_equation_separate GL_ATI_envmap_bumpmap GL_ATI_texture_env_combine3 GL_ATI_texture_mirror_once GL_ATI_fragment_shader GL_ATI_separate_stencil GL_IBM_multimode_draw_arrays GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_INGR_blend_func_separate GL_MESA_pack_invert GL_MESA_resize_buffers GL_MESA_texture_array GL_MESA_ycbcr_texture GL_MESA_window_pos GL_NV_blend_square GL_NV_depth_clamp GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_light_max_exponent GL_NV_packed_depth_stencil GL_NV_point_sprite GL_NV_texture_env_combine4 GL_NV_texture_rectangle GL_NV_texgen_reflection GL_NV_vertex_program GL_NV_vertex_program1_1 GL_OES_read_format GL_SGI_color_matrix GL_SGI_color_table GL_SGI_texture_color_table GL_SGIS_generate_mipmap GL_SGIS_texture_border_clamp GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_SUN_multi_draw_arrays
+17:25:49: Supported GLX extensions: GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_import_context GLX_EXT_visual_info GLX_EXT_visual_rating GLX_OML_swap_method GLX_SGIS_multisample GLX_SGIX_fbconfig GLX_SGIX_pbuffer 
+17:25:49: ***************************
+17:25:49: *** GL Renderer Started ***
+17:25:49: ***************************
+17:25:49: Registering ResourceManager for type GpuProgram
+17:25:49: GLSL support detected
+17:25:49: GL: Using GL_EXT_framebuffer_object for rendering to textures (best)
+17:25:49: FBO PF_UNKNOWN depth/stencil support: D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_R5G6B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_B5G6R5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_A4R4G4B4 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_A1R5G5B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_A8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_B8G8R8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_A2R10G10B10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_A2B10G10R10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_X8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_X8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_SHORT_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_R3G3B2 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: FBO PF_SHORT_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 
+17:25:49: [GL] : Valid FBO targets PF_UNKNOWN PF_R5G6B5 PF_B5G6R5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_B8G8R8A8 PF_A2R10G10B10 PF_A2B10G10R10 PF_X8R8G8B8 PF_X8B8G8R8 PF_SHORT_RGBA PF_R3G3B2 PF_SHORT_RGB 
+17:25:49: RenderSystem capabilities
+17:25:49: -------------------------
+17:25:49: RenderSystem Name: OpenGL Rendering Subsystem
+17:25:49: GPU Vendor: unknown
+17:25:49: Device Name: Software Rasterizer
+17:25:49: Driver Version: 2.1.0.0
+17:25:49:  * Fixed function pipeline: yes
+17:25:49:  * Hardware generation of mipmaps: yes
+17:25:49:  * Texture blending: yes
+17:25:49:  * Anisotropic texture filtering: no
+17:25:49:  * Dot product texture operation: yes
+17:25:49:  * Cube mapping: yes
+17:25:49:  * Hardware stencil buffer: yes
+17:25:49:    - Stencil depth: 8
+17:25:49:    - Two sided stencil support: yes
+17:25:49:    - Wrap stencil values: yes
+17:25:49:  * Hardware vertex / index buffers: yes
+17:25:49:  * Vertex programs: yes
+17:25:49:  * Fragment programs: yes
+17:25:49:  * Geometry programs: no
+17:25:49:  * Supported Shader Profiles: arbfp1 arbvp1 fp30 glsl ps_1_1 ps_1_2 ps_1_3 ps_1_4
+17:25:49:  * Texture Compression: yes
+17:25:49:    - DXT: no
+17:25:49:    - VTC: no
+17:25:49:  * Scissor Rectangle: yes
+17:25:49:  * Hardware Occlusion Query: yes
+17:25:49:  * User clip planes: yes
+17:25:49:  * VET_UBYTE4 vertex element type: yes
+17:25:49:  * Infinite far plane projection: yes
+17:25:49:  * Hardware render-to-texture: yes
+17:25:49:  * Floating point textures: no
+17:25:49:  * Non-power-of-two textures: yes
+17:25:49:  * Volume textures: yes
+17:25:49:  * Multiple Render Targets: 4
+17:25:49:    - With different bit depths: yes
+17:25:49:  * Point Sprites: yes
+17:25:49:  * Extended point parameters: yes
+17:25:49:  * Max Point Size: 60
+17:25:49:  * Vertex texture fetch: yes
+17:25:49:    - Max vertex textures: 16
+17:25:49:    - Vertex textures shared: yes
+17:25:49:  * Render to Vertex Buffer : no
+17:25:49:  * GL 1.5 without VBO workaround: no
+17:25:49:  * Frame Buffer objects: yes
+17:25:49:  * Frame Buffer objects (ARB extension): no
+17:25:49:  * Frame Buffer objects (ATI extension): no
+17:25:49:  * PBuffer suppport: no
+17:25:49:  * GL 1.5 without HW-occlusion workaround: no
+17:25:49: Registering ResourceManager for type Texture
+17:25:49: ResourceBackgroundQueue - threading disabled
+17:25:49: Particle Renderer Type 'billboard' registered
+17:25:49: SceneManagerFactory for type 'OctreeSceneManager' registered.
+17:25:49: SceneManagerFactory for type 'TerrainSceneManager' registered.
+17:25:49: Added resource location '/home/ljho/ros/stacks/visualization/rviz/ogre_media/textures' of type 'FileSystem' to resource group 'General'
+17:25:49: Parsing scripts for resource group Autodetect
+17:25:49: Finished parsing scripts for resource group Autodetect
+17:25:49: Parsing scripts for resource group General
+17:25:49: Finished parsing scripts for resource group General
+17:25:49: Parsing scripts for resource group Internal
+17:25:49: Finished parsing scripts for resource group Internal
+17:25:49: Parsing scripts for resource group ogre_tools
+17:25:49: Parsing script point_cloud_box.program
+17:25:49: Parsing script passthrough.program
+17:25:49: Parsing script point_cloud_billboard.program
+17:25:49: Parsing script point_cloud_point.program
+17:25:49: Parsing script point_cloud_billboard.material
+17:25:50: Parsing script point_cloud_point.material
+17:25:50: Parsing script point_cloud_box.material
+17:25:50: Parsing script arial.fontdef
+17:25:50: Finished parsing scripts for resource group ogre_tools
+17:25:50: Mesh: Loading ogre_tools_sphere.mesh.
+17:25:50: Mesh: Loading ogre_tools_cylinder.mesh.
+17:25:50: Mesh: Loading ogre_tools_cone.mesh.
+17:25:50: Texture: SelectionRect0Texture: Loading 1 faces(PF_R8G8B8A8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,1x1x1.
+17:25:50: Mesh: Loading ogre_tools_cube.mesh.
+17:25:50: Texture: Robot Link Material00RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material01RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material02RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material03RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material04RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material05RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material06RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material07RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material08RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material09RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: Robot Link Material010RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape5MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape6MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape7MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Font Arialusing texture size 512x512
+17:25:50: Info: Freetype returned null for character 160 in font Arial
+17:25:50: Texture: ArialTexture: Loading 1 faces(PF_BYTE_LA,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_BYTE_LA,512x512x1.
+17:25:50: Texture: ogre_tools::Shape10MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape11MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape12MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape15MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape16MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape17MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape20MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape21MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape22MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape25MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape26MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape27MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape30MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape31MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape32MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape35MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape36MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape37MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape40MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape41MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape42MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape45MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape46MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape47MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape50MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape51MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape52MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape55MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape56MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:25:50: Texture: ogre_tools::Shape57MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape60MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape61MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape62MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape65MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape66MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape67MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape70MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape71MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape72MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape75MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape76MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape77MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape80MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape81MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape82MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape85MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape86MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape87MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape90MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape91MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape92MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape95MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape96MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape97MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape100MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape101MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape102MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape105MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape106MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape107MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape110MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape111MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape112MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape115MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape116MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:04: Texture: ogre_tools::Shape117MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape120MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape121MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape122MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape125MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape126MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape127MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape130MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape131MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape132MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape135MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape136MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape137MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape140MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape141MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape142MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape145MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape146MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape147MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape150MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape151MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape152MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape155MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape156MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape157MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape160MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape161MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape162MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape165MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape166MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape167MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape170MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape171MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape172MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape175MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape176MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape177MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape180MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape181MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape182MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape185MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape186MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape187MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape190MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape191MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape192MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape195MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape196MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape197MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape200MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape201MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape202MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape205MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape206MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape207MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape210MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape211MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape212MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape215MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape216MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape217MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape220MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape221MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape222MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape225MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape226MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape227MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape230MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape231MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:15: Texture: ogre_tools::Shape232MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material011RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material012RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material013RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material014RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material015RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material016RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material017RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material018RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material019RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material020RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material021RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material022RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material023RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material024RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material025RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:28: Texture: Robot Link Material026RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material027RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material028RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material029RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material030RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material031RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material032RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material033RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material034RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material035RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material036RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:52: Texture: Robot Link Material037RobotPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape235MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape236MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape237MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape240MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape241MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape242MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape245MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape246MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape247MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape250MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape251MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape252MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape255MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape256MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape257MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape260MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape261MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape262MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape265MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape266MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape267MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape270MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape271MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape272MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape275MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape276MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape277MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape280MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape281MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape282MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape285MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape286MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape287MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape290MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape291MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape292MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape295MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape296MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape297MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape300MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape301MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape302MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape305MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape306MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape307MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape310MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape311MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape312MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape315MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape316MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape317MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape320MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape321MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape322MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape325MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape326MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape327MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape330MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape331MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape332MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape335MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape336MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape337MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape340MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape341MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape342MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape345MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape346MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:26:54: Texture: ogre_tools::Shape347MaterialPickTexture: Loading 1 faces(PF_R8G8B8,1x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1x1x1.
+17:27:11: *-*-* OGRE Shutdown
+17:27:11: Unregistering ResourceManager for type Compositor
+17:27:11: Unregistering ResourceManager for type Font
+17:27:11: Unregistering ResourceManager for type Skeleton
+17:27:11: Unregistering ResourceManager for type Mesh
+17:27:11: Unregistering ResourceManager for type HighLevelGpuProgram
+17:27:11: Uninstalling plugin: Cg Program Manager
+17:27:11: Plugin successfully uninstalled
+17:27:11: Unloading library Plugin_CgProgramManager
+17:27:11: Uninstalling plugin: ParticleFX
+17:27:11: Plugin successfully uninstalled
+17:27:11: Unloading library Plugin_ParticleFX
+17:27:11: Uninstalling plugin: Octree & Terrain Scene Manager
+17:27:11: Plugin successfully uninstalled
+17:27:11: Unloading library Plugin_OctreeSceneManager
+17:27:11: Uninstalling plugin: GL RenderSystem
+17:27:11: Unregistering ResourceManager for type GpuProgram
+17:27:11: ******************************
+*** Stopping GLX Subsystem ***
+******************************
+17:27:11: Unregistering ResourceManager for type Texture
+17:27:11: Plugin successfully uninstalled
+17:27:11: Unloading library RenderSystem_GL
+17:27:11: Unregistering ResourceManager for type Material
