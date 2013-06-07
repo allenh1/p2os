@@ -6,7 +6,7 @@
   <author>Maintained by Hunter Allen (hunter.allen@Vanderbilt.Edu)</author>
   <license>BSD,GPLv2</license>  
   <review status="" notes=""/>
-  <url>http://ros.org/wiki/p2os</url>
+  <url>http://www.ros.org/wiki/p2os-vanderbilt</url>
   <depend stack="common" /> <!-- xacro -->
   <depend stack="common_msgs" /> <!-- nav_msgs, geometry_msgs -->
   <depend stack="diagnostics" /> <!-- diagnostic_updater -->
