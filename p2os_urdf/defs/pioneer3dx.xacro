@@ -144,8 +144,8 @@
 		<child link="center_hubcap"/>
 	</joint>
 
-		<link name="left_hub">
-			<visual>
+	<link name="left_hub">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/left_hubcap.stl"/>
@@ -153,18 +153,18 @@
 			<material name="HubcapYellow">
 				<color rgba="1.0 0.811 0.151 1.0"/>
 			</material>
-			</visual>
-		</link>
+		</visual>
+	</link>
 
-		<joint name="left_hub_joint" type="fixed">
-			<origin xyz="0 0.15 0.08" rpy="0 0 0"/>
-			<parent link="base_link"/>
-			<child link="left_hub"/>
-			<axis xyz="0 1 0"/>
-		</joint>
+	<joint name="left_hub_joint" type="fixed">
+		<origin xyz="0 0.15 0.08" rpy="0 0 0"/>
+		<parent link="base_link"/>
+		<child link="left_hub"/>
+		<axis xyz="0 1 0"/>
+	</joint>
 
-		<link name="left_wheel_joint">
-			<visual>
+	<link name="left_wheel_joint">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/left_wheel.stl"/>
@@ -172,17 +172,17 @@
 			<material name="WheelBlack">
 				<color rgba="0.117 0.117 0.117 1"/>
 			</material>
-			</visual>
-		</link>
+		</visual>
+	</link>
 
-		<joint name="left_wheel_joint" type="fixed">
-			<origin xyz="0 0 0" rpy="0 0 0"/>
-			<parent link="left_hub"/>
-			<child link="left_wheel_joint"/>
-		</joint>
+	<joint name="left_wheel_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<parent link="left_hub"/>
+		<child link="left_wheel_joint"/>
+	</joint>
 
-		<link name="right_hub">
-			<visual>
+	<link name="right_hub">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/right_hubcap.stl"/>
@@ -190,18 +190,18 @@
 			<material name="HubcapYellow">
 				<color rgba="1.0 0.811 0.151 1.0"/>
 			</material>
-			</visual>
-		</link>
+		</visual>
+	</link>
 
-		<joint name="right_hub_joint" type="fixed">
-			<origin xyz="0 -0.15 0.08" rpy="0 0 0"/>
-			<parent link="base_link"/>
-			<child link="right_hub"/>
-			<axis xyz="0 1 0"/>
-		</joint>
+	<joint name="right_hub_joint" type="fixed">
+		<origin xyz="0 -0.15 0.08" rpy="0 0 0"/>
+		<parent link="base_link"/>
+		<child link="right_hub"/>
+		<axis xyz="0 1 0"/>
+	</joint>
 
-		<link name="right_wheel_joint">
-			<visual>
+	<link name="right_wheel_joint">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/right_wheel.stl"/>
@@ -209,14 +209,14 @@
 			<material name="WheelBlack">
 				<color rgba="0.117 0.117 0.117 1"/>
 			</material>
-			</visual>
-		</link>
+		</visual>
+	</link>
 
-		<joint name="right_wheel_joint" type="fixed">
-			<origin xyz="0 0 0" rpy="0 0 0"/>
-			<parent link="right_hub"/>
-			<child link="right_wheel_joint"/>
-		</joint>
+	<joint name="right_wheel_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<parent link="right_hub"/>
+		<child link="right_wheel_joint"/>
+	</joint>
 
 
 <!-- Front + Back Sonar -->
