@@ -13,7 +13,7 @@
   <depend stack="diagnostics_monitors" /> <!-- robot_monitor -->
   <depend stack="geometry" /> <!-- tf -->
   <depend stack="joystick_drivers" /> <!-- joy -->
-  <depend stack="robot_model" /> <!-- robot_state_publisher, urdf -->
+  <depend stack="rqt_robot_model" /> <!-- robot_state_publisher, urdf -->
   <depend stack="ros" /> <!-- roslib -->
   <depend stack="ros_comm" /> <!-- std_msgs, std_srvs, rospy, roscpp -->
   <depend stack="rx" /> <!-- rxtools -->
