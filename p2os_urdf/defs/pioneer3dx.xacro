@@ -21,6 +21,9 @@
 			</material>
 		</visual>
 	</link>
+	<gazebo reference="base_link">
+		<material value="Gazebo/Red"/>
+	</gazebo>
 
 <!-- Top -->
 	<joint name="base_top_joint" type="fixed">
@@ -31,6 +34,13 @@
 
 	<link name="top_plate">
 		<visual>
+			<inertial>
+				<mass value="0.01"/>	
+				<origin xyz="0 0 0"/>
+				<inertia ixx="1" ixy="0" ixz="0"
+					 iyy="1" iyz="0"
+	 				izz="1"/>
+			</inertial>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="top_geom">
 				<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/top.stl"/>
@@ -41,6 +51,9 @@
 			</material>
 		</visual>
 	</link>
+	<gazebo reference="top_plate">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 <!-- Swivel -->
 	<joint name="base_swivel_joint" type="continuous">
@@ -74,6 +87,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="swivel">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
 
 <!-- Center Wheel + Hubcap -->
 	<link name="center_hubcap">
