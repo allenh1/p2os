@@ -16,6 +16,6 @@
   <depend stack="rqt_robot_model" /> <!-- robot_state_publisher, urdf -->
   <depend stack="ros" /> <!-- roslib -->
   <depend stack="ros_comm" /> <!-- std_msgs, std_srvs, rospy, roscpp -->
-  <depend stack="rx" /> <!-- rxtools -->
+  <depend stack="rqt" /> <!-- rqt_tools -->
 
 </stack>
