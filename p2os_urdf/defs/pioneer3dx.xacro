@@ -289,17 +289,19 @@
 	</joint>
 
   <gazebo>
-    <controller:differential_position2d name="controller1">
+    <controller:diffdrive_plugin name="differential_drive_controller" plugin="libdiffdrive_plugin.so">
+      <alwaysOn>true</alwaysOn>
       <update>100</update>
+      <updateRate>100.0</updateRate>
       <leftJoint>base_right_wheel_joint</leftJoint>
       <rightJoint>base_left_wheel_joint</rightJoint>
       <wheelSeparation>0.39</wheelSeparation>
       <wheelDiameter>0.15</wheelDiameter>
       <torque>5</torque>
-
-
       <interface:position name="position_iface_0"/>
-    </controller:differential_position2d>
+      <robotNamespace>/</robotNamespace>
+      <topicName>cmd_vel</topicName>
+    </controller:diffdrive_plugin>
 
     <controller:gazebo_ros_p3d name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
       <alwaysOn>true</alwaysOn>
