@@ -26,9 +26,9 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Pose.h"
 #include "geometry_msgs/PoseStamped.h"
-#include <p2os_driver/MotorState.h>
+#include "../include/p2os_driver/MotorState.h"
 #include "tf/transform_datatypes.h"
-#include <p2os_driver/p2os.h>
+#include "../include/p2os_driver/p2os.h"
 
 int main( int argc, char** argv )
 {
