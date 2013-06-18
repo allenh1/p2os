@@ -33,6 +33,7 @@
 #include "tf/tf.h"
 #include "tf/transform_datatypes.h"
 #include <sstream>
+#include <boost/assign/list_of.hpp>
 
 void SIP::FillStandard(ros_p2os_data_t* data)
 {
@@ -76,15 +77,29 @@ void SIP::FillStandard(ros_p2os_data_t* data)
   data->position.twist.twist.linear.y = 0.0;
   data->position.twist.twist.angular.z = ((double)(rvel-lvel)/(2.0/PlayerRobotParams[param_idx].DiffConvFactor));
 
-  //publish transform
+  
+  data->position.pose.covariance = boost::assign::list_of	(1e-3) (0)    (0)   (0)   (0)   (0)
+                                                          (0)    (1e-3) (0)   (0)   (0)   (0)
+                                                          (0)    (0)    (1e6) (0)   (0)   (0)
+                                                          (0)    (0)    (0)   (1e6) (0)   (0)
+                                                          (0)    (0)    (0)   (0)   (1e6) (0)
+                                                          (0)    (0)    (0)   (0)   (0)   (1e3) ;
 
+	data->position.twist.covariance = boost::assign::list_of (1e-3) (0)    (0)   (0)   (0)   (0)
+                                                           (0)    (1e-3) (0)   (0)   (0)   (0)
+                                                           (0)    (0)    (1e6) (0)   (0)   (0)
+                                                           (0)    (0)    (0)   (1e6) (0)   (0)
+                                                           (0)    (0)    (0)   (0)   (1e6) (0)
+                                                           (0)    (0)    (0)   (0)   (0)   (1e3) ;
+
+
+  //publish transform
   data->odom_trans.header = data->position.header;
   data->odom_trans.child_frame_id = data->position.child_frame_id;
   data->odom_trans.transform.translation.x = px;
   data->odom_trans.transform.translation.y = py;
   data->odom_trans.transform.translation.z = 0;
   data->odom_trans.transform.rotation = tf::createQuaternionMsgFromYaw(pa); 
-
 
   // battery
   data->batt.voltage = battery / 10.0;
