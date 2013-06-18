@@ -1,0 +1,12 @@
+Source: ros-groovy-p2os-driver
+Section: misc
+Priority: extra
+Maintainer: Hunter Allen <hunter.allen@vanderbilt.edu>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin, ros-groovy-geometry-msgs, ros-groovy-message-generation, ros-groovy-std-msgs, ros-groovy-tf
+Homepage: http://ros.org/wiki/p2os-vanderbilt
+Standards-Version: 3.9.2
+
+Package: ros-groovy-p2os-driver
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-geometry-msgs, ros-groovy-message-runtime, ros-groovy-std-msgs, ros-groovy-tf
+Description: Driver file descriptions for P2OS/ARCOS robot
