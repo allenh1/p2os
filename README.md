@@ -1,7 +1,7 @@
 p2os
 ====
 
-P2OS ROS driver for Groovy
+P2OS ROS driver for Groovy. We are currently updating the packages to use [catkin](http://ros.org/wiki/catkin) instead of rosbuild.
 
 p2os_dashboard
 --------------
