@@ -1,0 +1,26 @@
+<package>
+  <name>p2os_launch</name>
+  <version>1.0.0</version>
+  <description>This package contains launch and config files designed for use with the p2os stack.</description>
+  <!-- <maintainer>Edward</maintainer> -->
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <maintainer email="hunter.allen@vanderbilt.edu">Hunter Allen</maintainer>
+
+  <author email="hunter.allen@Vanderbilt.edu">Hunter Allen</author>
+  <author email="dfseifer@usc.edu">David Feil-Seifer</author>
+  <author>Brian Gerkey</author>
+  <author>Kasper Stoy</author>
+  <author>Richard Vaughan</author>
+  <author>Andrew Howard</author>
+  <author>Tucker Hermans</author>
+  <author>ActivMedia Robotics LLC</author>
+  <author>MobileRobots Inc.</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+</package>
