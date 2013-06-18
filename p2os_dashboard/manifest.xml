@@ -1,0 +1,21 @@
+<package>
+    <description brief="P2OS Dashboard">
+    
+      p2os_dashboard is a GUI for debugging and controlling low-level state of the P2OS.  It shows things like battery status and breaker states, as well as integrating tools like rxconsole and robot_monitor.
+    
+    </description>
+    <author>David Feil-Seifer (dfseifer@usc.edu)</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    <url>http://ros.org/wiki</url>
+    <depend package="rxtools"/>
+    <depend package="robot_monitor"/>
+    <depend package="rospy"/>
+    <depend package="roslib"/>
+    <depend package="std_srvs"/>
+    <depend package="std_msgs"/>
+    <depend package="p2os_driver"/>    
+  <rosdep name="wxwidgets"/>
+  <rosdep name="wxpython"/>
+</package>
+

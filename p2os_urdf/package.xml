@@ -1,0 +1,38 @@
+<package>
+  <name>p2os_urdf</name>
+  <version>1.0.0</version>
+  <description>URDF file descriptions for P2OS/ARCOS robot</description>
+  <!-- <maintainer>Edward</maintainer> -->
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <maintainer email="hunter.allen@vanderbilt.edu">Hunter Allen</maintainer>
+
+  <author email="hunter.allen@Vanderbilt.edu">Hunter Allen</author>
+  <author email="dfseifer@usc.edu">David Feil-Seifer</author>
+  <author>Brian Gerkey</author>
+  <author>Kasper Stoy</author>
+  <author>Richard Vaughan</author>
+  <author>Andrew Howard</author>
+  <author>Tucker Hermans</author>
+  <author>ActivMedia Robotics LLC</author>
+  <author>MobileRobots Inc.</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+</package>
