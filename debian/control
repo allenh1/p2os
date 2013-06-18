@@ -1,0 +1,12 @@
+Source: ros-groovy-p2os-launch
+Section: misc
+Priority: extra
+Maintainer: Hunter Allen <hunter.allen@vanderbilt.edu>
+Build-Depends: debhelper (>= 7.0.50~), ros-groovy-catkin
+Homepage: http://ros.org/wiki/p2os-vanderbilt
+Standards-Version: 3.9.2
+
+Package: ros-groovy-p2os-launch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: This package contains launch and config files designed for use with the p2os stack.
