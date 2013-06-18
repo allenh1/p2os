@@ -31,7 +31,7 @@ p2os_urdf
 ---------
 
 Allows you to see the robot within RVIZ for navigation purposes. 
-No catkin.
+Catkin support!
 
 To Do: 
 ------
