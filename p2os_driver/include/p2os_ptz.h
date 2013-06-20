@@ -24,7 +24,7 @@
 #ifndef _P2OS_PTZ_H
 #define _P2OS_PTZ_H
 
-#include <p2os_driver/PTZState.h>
+#include <PTZState.h>
 #include "packet.h"
 #include "robot_params.h"
 

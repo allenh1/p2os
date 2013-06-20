@@ -63,7 +63,7 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 catkin_package(
     # DEPENDS roscpp joy geometry_msgs
-    CATKIN_DEPENDS message_runtime robot_state_publisher xacro urdf geometry_msgs sensor_msgs
+    CATKIN_DEPENDS message_runtime robot_state_publisher urdf geometry_msgs sensor_msgs
     INCLUDE_DIRS 
     LIBRARIES lib
 )

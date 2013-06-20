@@ -20,8 +20,8 @@
  *
  */
 
-#include "../include/p2os_driver/p2os_ptz.h"
-#include "../include/p2os_driver/p2os.h"
+#include "../include/p2os_ptz.h"
+#include "../include/p2os.h"
 
 //
 // Constants

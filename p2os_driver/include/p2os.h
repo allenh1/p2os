@@ -36,12 +36,12 @@
 #include "nav_msgs/Odometry.h"
 #include "geometry_msgs/Twist.h"
 #include <tf/transform_broadcaster.h>
-#include <p2os_driver/BatteryState.h>
-#include <p2os_driver/MotorState.h>
-#include <p2os_driver/GripperState.h>
-#include <p2os_driver/SonarArray.h>
-#include <p2os_driver/DIO.h>
-#include <p2os_driver/AIO.h>
+#include <BatteryState.h>
+#include <MotorState.h>
+#include <GripperState.h>
+#include <SonarArray.h>
+#include <DIO.h>
+#include <AIO.h>
 
 #include <diagnostic_updater/publisher.h>
 #include <diagnostic_updater/diagnostic_updater.h>
