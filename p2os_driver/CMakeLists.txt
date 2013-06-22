@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(p2os_driver)
 
-find_package(catkin REQUIRED COMPONENTS message_generation roscpp geometry_msgs tf std_msgs)
+find_package(catkin REQUIRED COMPONENTS nav_msgs message_generation roscpp geometry_msgs tf std_msgs)
 
 #######################################
 ## Declare ROS messages and services ##
@@ -25,8 +25,10 @@ generate_messages(
   DEPENDENCIES
   std_msgs
   geometry_msgs
+  nav_msgs
 )
 
+#add_dependencies(p2os_driver nav_msgs_gencpp)
 ###################################################
 ## Declare things to be passed to other projects ##
 ###################################################
@@ -37,7 +39,7 @@ generate_messages(
 catkin_package(
    INCLUDE_DIRS include
 #  LIBRARIES p2os_driver
-   CATKIN_DEPENDS message_runtime roscpp geometry_msgs tf std_msgs
+   CATKIN_DEPENDS message_runtime nav_msgs roscpp geometry_msgs tf std_msgs
 #  DEPENDS system_lib
 )
 
@@ -59,7 +61,7 @@ add_executable(p2os_driver  src/p2osnode.cc
                             src/sip.cc 
                             src/p2os_ptz.cpp)
 target_link_libraries(p2os_driver ${catkin_LIBRARIES})
-
+add_dependencies(p2os_driver nav_msgs_gencpp)
 
 #############
 ## Install ##

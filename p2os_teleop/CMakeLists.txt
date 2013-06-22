@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS message_generation joy geometry_msgs std
 # cmake_minimum_required(VERSION 2.4.6)
 
 # CATKIN_MIGRATION: removed during catkin migration
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+#include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
 
 # Set the build type.  Options are:
 #  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
