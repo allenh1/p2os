@@ -68,10 +68,10 @@ catkin_package(
     LIBRARIES lib
 )
 
-add_executable(p2os_urdf src/publisher.cc)
-target_link_libraries(p2os_urdf ${catkin_LIBRARIES})
+add_executable(publisher src/publisher.cc)
+target_link_libraries(publisher ${catkin_LIBRARIES})
 
-install(TARGETS p2os_urdf
+install(TARGETS publisher
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
