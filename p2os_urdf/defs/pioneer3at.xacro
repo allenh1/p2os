@@ -4,7 +4,7 @@
        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
        xmlns:xacro="http://ros.org/wiki/xacro"
-name="pioneer3dx">
+name="pioneer3at">
 
 <!-- Chassis -->
 	<link name="base_link">
