@@ -9,11 +9,11 @@ name="pioneer3at">
 <!-- Chassis -->
 	<link name="base_link">
 		<inertial>
-			<mass value="3.5"/>
-			<origin xyz="-0.025 0 -0.223"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0"
-				 izz="1"/>
+			<mass value="10.0"/>
+			<origin xyz="0 0 0.177"/>
+			<inertia ixx="0.3338" ixy="0.0" ixz="0.0"
+				 iyy="0.4783" iyz="0.0"
+				 izz="0.3338"/>
 		</inertial>
 		<visual name="base_visual">
 			<origin xyz="0 0 0.177" rpy="0 0 0"/>
@@ -25,9 +25,9 @@ name="pioneer3at">
 			</material>
 		</visual>
 		<collision>
-			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<origin xyz="0 0 0.177" rpy="0 0 0"/>
 				<geometry>
-					<box size="0.01 0.01 0.01"/>
+					<mesh filename="package://p2os_urdf/meshes/p3at_meshes/chassis.stl"/>
 				</geometry>
 		</collision>
 	</link>
@@ -35,11 +35,11 @@ name="pioneer3at">
 <!-- Top -->
 	<link name="top_plate">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="-0.025 0 -0.223"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0"
- 				izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0"
+ 				izz="1.0"/>
 		</inertial>
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -66,10 +66,10 @@ name="pioneer3at">
 <!-- Front + Back Sonar -->
 	<link name="front_sonar">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
 		</inertial>
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -96,10 +96,10 @@ name="pioneer3at">
 
 	<link name="back_sonar">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
 		</inertial>
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -128,10 +128,10 @@ name="pioneer3at">
 <xacro:macro name="p3at_front" params="suffix reflect">
 	<link name="p3at_front_${suffix}_axle">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -158,10 +158,10 @@ name="pioneer3at">
 
 	<link name="p3at_front_${suffix}_hub">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -188,11 +188,11 @@ name="pioneer3at">
 
 	<link name="p3at_front_${suffix}_wheel">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.5"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
-  	 	</inertial>
+			<inertia ixx="0.012411765597" ixy="0" ixz="0"
+         iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+      </inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
@@ -205,12 +205,16 @@ name="pioneer3at">
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<box size="0 0 0"/>
+			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
 		</geometry>
 	</collision>
 	</link>
 
-	<joint name="base_front_${suffix}_wheel_joint" type="fixed">
+	<joint name="p3at_front_${suffix}_wheel_joint" type="continuous">
+  	<axis xyz="0 1 0"/>
+    <anchor xyz="0 0 0"/>
+    <limit effort="100" velocity="100" />
+    <joint_properties damping="0.7"/>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<parent link="p3at_front_${suffix}_hub"/>
 		<child link="p3at_front_${suffix}_wheel"/>
@@ -219,10 +223,10 @@ name="pioneer3at">
 <!-- Back Axles + Wheels + Hubcaps -->
 	<link name="p3at_back_${suffix}_axle">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -236,7 +240,7 @@ name="pioneer3at">
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<box size="0 0 0"/>
+			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/axle.stl"/>
 		</geometry>
 	</collision>
 	</link>
@@ -250,10 +254,10 @@ name="pioneer3at">
 
 	<link name="p3at_back_${suffix}_hub">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -265,7 +269,7 @@ name="pioneer3at">
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<box size="0 0 0"/>
+			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
 		</geometry>
 	</collision>
 	</link>
@@ -278,11 +282,11 @@ name="pioneer3at">
 
 	<link name="p3at_back_${suffix}_wheel">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.5"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
-  	 	</inertial>
+			<inertia ixx="0.012411765597" ixy="0" ixz="0"
+         iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
+      </inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
@@ -293,16 +297,30 @@ name="pioneer3at">
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<box size="0 0 0"/>
+	    <mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
 		</geometry>
 	</collision>
 	</link>
 
-	<joint name="p3at_back_${suffix}_wheel_joint" type="fixed">
+	<joint name="p3at_back_${suffix}_wheel_joint" type="continuous">
+	  <axis xyz="0 1 0"/>
+    <anchor xyz="0 0 0"/>
+    <limit effort="100" velocity="100" />
+    <joint_properties damping="0.7"/>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<parent link="p3at_back_${suffix}_hub"/>
 		<child link="p3at_back_${suffix}_wheel"/>
 	</joint>
+	
+  <gazebo reference="p3at_back_${suffix}_wheel">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
+  
+  <gazebo reference="p3at_front_${suffix}_wheel">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+  </gazebo>
 
 </xacro:macro>
 
@@ -310,5 +328,25 @@ name="pioneer3at">
 <xacro:p3at_front suffix="right" reflect="-1"/>
 <xacro:p3at_back suffix="left" reflect="1"/>
 <xacro:p3at_back suffix="right" reflect="-1"/>
+
+
+<gazebo>
+    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+        <update>100</update>
+        <updateRate>100.0</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <leftFrontJoint>p3at_front_left_wheel_joint</leftFrontJoint>
+        <rightFrontJoint>p3at_front_right_wheel_joint</rightFrontJoint>
+        <leftRearJoint>p3at_back_left_wheel_joint</leftRearJoint>
+        <rightRearJoint>p3at_back_right_wheel_joint</rightRearJoint>
+        <wheelSeparation>0.4</wheelSeparation>
+        <wheelDiameter>0.215</wheelDiameter>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <torque>5</torque>
+        <interface:position name="position_iface_0"/>
+        <topicName>cmd_vel</topicName>
+    </plugin>
+
+</gazebo>
 
 </robot>
