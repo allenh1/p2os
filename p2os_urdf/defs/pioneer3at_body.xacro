@@ -31,6 +31,9 @@
 				</geometry>
 		</collision>
 	</link>
+	<gazebo reference="base_link">
+		<material value="Gazebo/Red"/>
+	</gazebo>
 
 <!-- Top -->
 	<link name="top_plate">
@@ -57,6 +60,9 @@
 			</geometry>
 		</collision>
 	</link>
+	<gazebo reference="top_plate">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 	<joint name="base_top_joint" type="fixed">
 		<origin xyz="0.003 0 0.274" rpy="0 0 0"/>
@@ -87,6 +93,9 @@
 			</geometry>
 		</collision>
 	</link>
+	<gazebo reference="front_sonar">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="base_front_joint" type="fixed">
 		<origin xyz="0.193 0 0.25" rpy="0 0 0"/>
@@ -117,6 +126,9 @@
 			</geometry>
 		</collision>
 	</link>
+	<gazebo reference="back_sonar">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="base_back_joint" type="fixed">
 		<origin xyz="-0.187 0 0.247" rpy="0 0 0"/>
@@ -149,6 +161,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_front_${suffix}_axle">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
 
 	<joint name="base_front_${suffix}_axle_joint" type="fixed">
 		<origin xyz="0.135 ${reflect*0.156} 0.111" rpy="0 0 0"/>
@@ -179,6 +194,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_front_${suffix}_hub">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="base_front_${suffix}_hub_joint" type="fixed">
 		<origin xyz="0 ${reflect*0.041} 0" rpy="0 0 0"/>
@@ -209,6 +227,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_front_${suffix}_wheel">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 	<joint name="p3at_front_${suffix}_wheel_joint" type="continuous">
   	<axis xyz="0 1 0"/>
@@ -244,6 +265,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_back_${suffix}_axle">
+		<material value="Gazebo/Grey"/>
+	</gazebo>
 
 	<joint name="bp3at_back_${suffix}_axle_joint" type="fixed">
 		<origin xyz="-0.134 ${reflect*0.156} 0.111" rpy="0 0 0"/>
@@ -273,6 +297,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_back_${suffix}_hub">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="p3at_back_${suffix}_hub_joint" type="fixed">
 		<origin xyz="-0 ${reflect*0.041} 0" rpy="0 0 0"/>
@@ -301,6 +328,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="p3at_back_${suffix}_wheel">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 	<joint name="p3at_back_${suffix}_wheel_joint" type="continuous">
 	  <axis xyz="0 1 0"/>
