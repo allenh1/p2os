@@ -221,9 +221,11 @@
 		</material>
 	</visual>
 	<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
 		<geometry>
-			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
+	    <!--mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/-->
+	    <!--cylinder radius="0.111" length="0.075"/-->
+	    <cylinder radius="0.111" length="0.005"/> <!-- workaround -->
 		</geometry>
 	</collision>
 	</link>
@@ -322,9 +324,11 @@
 		<material name="WheelBlack"/>
 	</visual>
 	<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
 		<geometry>
-	    <mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
+	    <!--mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/-->
+	    <!--cylinder radius="0.111" length="0.075"/-->
+	    <cylinder radius="0.111" length="0.005"/> <!-- workaround -->
 		</geometry>
 	</collision>
 	</link>
@@ -343,13 +347,13 @@
 	</joint>
 	
   <gazebo reference="p3at_back_${suffix}_wheel">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
   </gazebo>
   
   <gazebo reference="p3at_front_${suffix}_wheel">
-    <mu1>0.2</mu1>
-    <mu2>0.2</mu2>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
   </gazebo>
 
 </xacro:macro>
@@ -369,7 +373,7 @@
     <wheelSeparation>0.4</wheelSeparation>
     <wheelDiameter>0.215</wheelDiameter>
     <robotBaseFrame>base_link</robotBaseFrame>
-    <torque>5</torque>
+    <torque>200</torque>
     <interface:position name="position_iface_0"/>
     <topicName>cmd_vel</topicName>
   </plugin>
