@@ -153,6 +153,9 @@
 		</geometry>
 	</collision>
 	</link>
+	<gazebo reference="left_hub">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="center_wheel_joint" type="fixed">
 		<origin xyz="-0.0035 0 -0.001" rpy="0 0 0"/>
@@ -196,6 +199,10 @@
 		<parent link="left_hub"/>
 		<child link="left_wheel_joint"/>
 	</joint>
+	
+	<gazebo reference="left_wheel_joint">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 	<link name="right_hub">
 		<visual>
@@ -208,6 +215,9 @@
 			</material>
 		</visual>
 	</link>
+	<gazebo reference="right_hub">
+		<material value="Gazebo/Yellow"/>
+	</gazebo>
 
 	<joint name="right_hub_joint" type="fixed">
 		<origin xyz="0 -0.15 0.08" rpy="0 0 0"/>
@@ -233,7 +243,9 @@
 		<parent link="right_hub"/>
 		<child link="right_wheel_joint"/>
 	</joint>
-
+	<gazebo reference="right_wheel_joint">
+		<material value="Gazebo/Black"/>
+	</gazebo>
 
 <!-- Front + Back Sonar -->
 	<link name="front_sonar">
@@ -304,38 +316,22 @@
 		<child link="back_sonar"/>
 	</joint>
 
-  <gazebo>
-    <controller:diffdrive_plugin name="differential_drive_controller" plugin="libdiffdrive_plugin.so">
-      <alwaysOn>true</alwaysOn>
-      <update>100</update>
-      <updateRate>100.0</updateRate>
-      <leftJoint>base_right_wheel_joint</leftJoint>
-      <rightJoint>base_left_wheel_joint</rightJoint>
-      <wheelSeparation>0.39</wheelSeparation>
-      <wheelDiameter>0.15</wheelDiameter>
-      <torque>5</torque>
-      <interface:position name="position_iface_0"/>
-      <robotNamespace>/</robotNamespace>
-      <topicName>cmd_vel</topicName>
-    </controller:diffdrive_plugin>
+<xacro:macro name="p3at_gazebo_ext">
 
-    <controller:gazebo_ros_p3d name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
-      <alwaysOn>true</alwaysOn>
-      <updateRate>100.0</updateRate>
-      <bodyName>base_link</bodyName>
-      <topicName>base_pose_ground_truth</topicName>
-      <gaussianNoise>0.01</gaussianNoise>
-      <frameName>map</frameName>
-      <xyzOffsets>0 0 0</xyzOffsets> <!-- initialize odometry for fake localization-->
-      <rpyOffsets>0 0 0</rpyOffsets>
-      <interface:position name="p3d_base_position"/>
-    </controller:gazebo_ros_p3d>
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftJoint>base_right_wheel_joint</leftJoint>
+    <rightJoint>base_left_wheel_joint</rightJoint>
+    <wheelSeparation>0.39</wheelSeparation>
+    <wheelDiameter>0.15</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>200</torque>
+    <topicName>cmd_vel</topicName>
+  </plugin>
+</gazebo>
 
-    <controller:gazebo_ros_controller_manager name="gazebo_ros_controller_manager" plugin="libgazebo_ros_controller_manager.so">
-      <alwaysOn>true</alwaysOn>
-      <updateRate>1000.0</updateRate>
-      <interface:audio name="gazebo_ros_controller_manager_dummy_iface" />
-    </controller:gazebo_ros_controller_manager>
-  </gazebo>
+</xacro:macro>
 
 </robot>
