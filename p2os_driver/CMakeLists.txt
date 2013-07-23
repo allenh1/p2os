@@ -71,9 +71,3 @@ add_dependencies(p2os_driver nav_msgs_gencpp)
 install(TARGETS p2os_driver
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-
-## Mark other files for installation (e.g. launch and bag files, etc.)
- install(DIRECTORY 
-   launch
-   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
- )
