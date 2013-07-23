@@ -18,7 +18,6 @@ generate_messages(
 
 catkin_package(
     CATKIN_DEPENDS message_runtime robot_state_publisher urdf geometry_msgs sensor_msgs
-    INCLUDE_DIRS 
     LIBRARIES lib
 )
 
