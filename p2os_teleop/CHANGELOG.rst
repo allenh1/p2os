@@ -2,8 +2,11 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2013-07-23)
+------------------
+* Cleaned up for release
+* Removed manifest and mainpage
+
 * Updated to match hmt-git.com
 
 * Updated to hmt-git.com repo
