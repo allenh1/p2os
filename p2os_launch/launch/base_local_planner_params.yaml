@@ -4,7 +4,7 @@ TrajectoryPlannerROS:
   max_rotational_vel: 0.8
   min_in_place_rotational_vel: 0.3
   backup_vel: -0.2
-  
+
   sim_time: 2.0
   path_distance_bias: 0.6
   goal_distance_bias: 0.6
