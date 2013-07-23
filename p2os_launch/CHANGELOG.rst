@@ -4,6 +4,7 @@ Changelog for package p2os_launch
 
 Forthcoming
 -----------
+* Updated to hmt-git.com repo
 
 1.0.1 (2013-07-22)
 ------------------
