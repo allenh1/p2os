@@ -4,6 +4,7 @@ Changelog for package p2os_driver
 
 Forthcoming
 -----------
+
 * Syncing github with hmt-git.com repository
 
 1.0.1 (2013-07-22)

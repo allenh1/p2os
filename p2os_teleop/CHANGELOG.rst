@@ -4,6 +4,8 @@ Changelog for package p2os_teleop
 
 Forthcoming
 -----------
+* Updated to match hmt-git.com
+
 * Updated to hmt-git.com repo
 
 1.0.1 (2013-07-22)

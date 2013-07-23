@@ -4,6 +4,10 @@ Changelog for package p2os_launch
 
 Forthcoming
 -----------
+* Added new navigation files
+* Added new launch files
+* Updated to match hmt-git.com
+
 * Updated to hmt-git.com repo
 
 1.0.1 (2013-07-22)
