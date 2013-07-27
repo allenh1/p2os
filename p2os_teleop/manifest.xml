@@ -1,0 +1,16 @@
+<package>
+	<description brief="p2os_teleop">
+
+     p2os_teleop
+
+	</description>
+	<author>Edward</author>
+	<license>BSD</license>
+	<review status="unreviewed" notes=""/>
+	<url>http://ros.org/wiki/p2os_teleop</url>
+	<depend package="roscpp"/>
+	<depend package="joy"/>
+	<depend package="geometry_msgs"/>
+</package>
+
+
