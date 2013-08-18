@@ -2,6 +2,10 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated to match hmt-git.com repository
+
 1.0.5 (2013-07-23)
 ------------------
 * Cleaned up for release
