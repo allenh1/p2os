@@ -2,6 +2,13 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated version
+* 1.0.7
+* Updated changelogs
+* Updated the launch files
+
 1.0.7 (2013-08-18)
 ------------------
 * Updated the launch files

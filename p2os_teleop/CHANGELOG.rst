@@ -2,6 +2,12 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated version
+* 1.0.7
+* Updated changelogs
+
 1.0.7 (2013-08-18)
 ------------------
 
