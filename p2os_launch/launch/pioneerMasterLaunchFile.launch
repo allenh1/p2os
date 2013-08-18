@@ -12,7 +12,7 @@
 
         <!-- Start the p2os ROS Driver -->
 	<group if="$(arg P2OS_Driver)" >
-	<node pkg="p2os_driver" name="p2os" type="p2os"/>
+	<node pkg="p2os_driver" name="p2os_driver" type="p2os_driver"/>
 	</group>
 	
 
@@ -24,33 +24,33 @@
 
         <!-- Start the teleoperation node for keyboard control -->
         <group if="$(arg KeyboardTeleop)">
-                <include file="$(find p2os_launch)/teleop_keyboard.launch" />
+                <include file="$(find p2os_launch)/launch/teleop_keyboard.launch" />
         </group>
 
 	 <!-- Start the teleoperation node for joystick control -->
         <group if="$(arg JoystickTeleop)">
-                <include file="$(find p2os_launch)/teleop_joy.launch" /> 
+                <include file="$(find p2os_launch)/launch/teleop_joy.launch" /> 
         </group>
 
         <!-- Publish the required transform -->
         <group if="$(arg Transform)">
-		<include file="$(find p2os_launch)/tf_base_link_to_laser.launch" />          
+		<include file="$(find p2os_launch)/launch/tf_base_link_to_laser.launch" />          
         </group>
 
 
 
         <!-- Start the Hokuyo Laser node if Hokuyo Laser is used -->
         <group if="$(arg HokuyoLaser)">
-                <include file="$(find p2os_launch)/hokuyo.launch" /> 
+                <include file="$(find p2os_launch)/launch/hokuyo.launch" /> 
         </group>
 
 
 
         <!-- Start the SICK LMS Laser Node if a SICK Laser is used -->
         <group if="$(arg SICKLMSLaser)">
-               <include file="$(find p2os_launch)/sicklms.launch" /> 
+               <include file="$(find p2os_launch)/launch/sicklms.launch" /> 
         </group>
 
-        <include file="$(find p2os_urdf)/pioneer3dx_urdf.launch"/>
+        <include file="$(find p2os_urdf)/launch/pioneer3dx_urdf.launch"/>
 </launch>
 
