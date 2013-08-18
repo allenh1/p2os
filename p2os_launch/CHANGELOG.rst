@@ -2,8 +2,10 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.7 (2013-08-18)
+------------------
+* Updated the launch files
+
 * Updated to match hmt-git.com repository
 
 1.0.5 (2013-07-23)
