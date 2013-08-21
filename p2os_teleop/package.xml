@@ -2,12 +2,10 @@
   <name>p2os_teleop</name>
   <version>1.0.9</version>
   <description>p2os_teleop</description>
-  <!-- <maintainer>Edward</maintainer> -->
-
   <license>BSD</license>
 
   <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>
-  <!-- <url type="bugtracker"></url> -->
+  <url type="bugtracker">https://github.com/allenh1/p2os/issues</url>
 
   <maintainer email="hunter.allen@vanderbilt.edu">Hunter Allen</maintainer>
 
