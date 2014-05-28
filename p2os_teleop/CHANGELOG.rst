@@ -2,8 +2,8 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.10 (2014-05-28)
+-------------------
 * Added issue tracker to package.xml for telop
 * Contributors: Hunter Allen
 
