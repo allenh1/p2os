@@ -16,6 +16,6 @@ install(TARGETS publisher
 )
 
 install(DIRECTORY 
-   launch
+   launch defs meshes models
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
  )
