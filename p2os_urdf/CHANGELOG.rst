@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.10 (2014-05-28)
+-------------------
 * Added meshes directory to CMake install dir.
 * Removed unneccessary files
 * Contributors: Hunter Allen

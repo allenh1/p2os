@@ -1,6 +1,6 @@
 <package>
   <name>p2os_launch</name>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <description>This package contains launch and config files designed for use with the p2os stack.</description>
   <!-- <maintainer>Edward</maintainer> -->
 
