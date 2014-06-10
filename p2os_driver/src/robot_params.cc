@@ -56,7 +56,7 @@
  *    psos1m.p
  *    psos1x.p
 */
-#include "../include/robot_params.h"
+#include <p2os_driver/robot_params.h>
 
 
 RobotParams_t amigo_params =
