@@ -4,8 +4,12 @@ project(p2os_teleop)
 find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs std_msgs sensor_msgs tf)
 
 catkin_package(
-    CATKIN_DEPENDS message_runtime geometry_msgs sensor_msgs tf
+    CATKIN_DEPENDS message_runtime geometry_msgs sensor_msgs tf std_msgs
     LIBRARIES lib
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
 )
 
 add_executable(p2os_teleop src/p2os_teleop.cc)

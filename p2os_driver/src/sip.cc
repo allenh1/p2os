@@ -29,9 +29,9 @@
 #include <stdlib.h> /* for abs() */
 #include <unistd.h>
 
-#include "../include/sip.h"
-#include "tf/tf.h"
-#include "tf/transform_datatypes.h"
+#include <p2os_driver/sip.h>
+#include <tf/tf.h>
+#include <tf/transform_datatypes.h>
 #include <sstream>
 #include <boost/assign/list_of.hpp>
 
