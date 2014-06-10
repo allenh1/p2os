@@ -22,7 +22,7 @@
  */
 
 #include <ros/ros.h>
-#include "../include/p2os.h"
+#include <p2os_driver/p2os.h>
 
 #include <termios.h>
 #include <fcntl.h>
