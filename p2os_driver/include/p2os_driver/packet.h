@@ -26,7 +26,7 @@
 #define _PACKET_H
 
 #include <string.h>
-#include "ros/ros.h"
+#include <ros/ros.h>
 
 #define PACKET_LEN 256
 
