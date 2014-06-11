@@ -4,7 +4,6 @@ project(p2os_msgs)
 find_package(catkin REQUIRED COMPONENTS
   message_generation
   std_msgs
-  geometry_msgs
 )
 
 add_message_files(DIRECTORY msg FILES
@@ -21,8 +20,8 @@ add_message_files(DIRECTORY msg FILES
   SonarArray.msg
 )
 
-generate_messages(DEPENDENCIES std_msgs geometry_msgs)
+generate_messages(DEPENDENCIES std_msgs)
 
 catkin_package(
-	CATKIN_DEPENDS message_runtime
+	CATKIN_DEPENDS message_runtime std_msgs
 )
