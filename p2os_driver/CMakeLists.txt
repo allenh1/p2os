@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(p2os_driver)
 
-find_package(catkin REQUIRED COMPONENTS p2os_msgs diagnostic_updater nav_msgs message_generation roscpp geometry_msgs tf std_msgs)
+find_package(catkin REQUIRED COMPONENTS p2os_msgs diagnostic_updater nav_msgs roscpp geometry_msgs tf std_msgs)
 
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES p2os_driver
-   CATKIN_DEPENDS p2os_msgs message_runtime nav_msgs roscpp geometry_msgs diagnostic_updater tf std_msgs
+   CATKIN_DEPENDS p2os_msgs nav_msgs roscpp geometry_msgs diagnostic_updater tf std_msgs
 #  DEPENDS system_lib
 )
 
