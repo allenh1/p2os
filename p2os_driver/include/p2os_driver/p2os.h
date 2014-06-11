@@ -36,12 +36,12 @@
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/Twist.h>
 #include <tf/transform_broadcaster.h>
-#include <p2os_driver/BatteryState.h>
-#include <p2os_driver/MotorState.h>
-#include <p2os_driver/GripperState.h>
-#include <p2os_driver/SonarArray.h>
-#include <p2os_driver/DIO.h>
-#include <p2os_driver/AIO.h>
+#include <p2os_msgs/BatteryState.h>
+#include <p2os_msgs/MotorState.h>
+#include <p2os_msgs/GripperState.h>
+#include <p2os_msgs/SonarArray.h>
+#include <p2os_msgs/DIO.h>
+#include <p2os_msgs/AIO.h>
 
 #include <diagnostic_updater/publisher.h>
 #include <diagnostic_updater/diagnostic_updater.h>
@@ -49,12 +49,12 @@
 typedef struct ros_p2os_data
 {
     nav_msgs::Odometry  position;
-    p2os_driver::BatteryState batt;
-    p2os_driver::MotorState motors;
-    p2os_driver::GripperState gripper;
-    p2os_driver::SonarArray sonar;
-    p2os_driver::DIO dio;
-    p2os_driver::AIO aio;
+    p2os_msgs::BatteryState batt;
+    p2os_msgs::MotorState motors;
+    p2os_msgs::GripperState gripper;
+    p2os_msgs::SonarArray sonar;
+    p2os_msgs::DIO dio;
+    p2os_msgs::AIO aio;
     geometry_msgs::TransformStamped odom_trans;
 } ros_p2os_data_t;
 
@@ -102,10 +102,10 @@ class P2OSNode
     void cmdvel_cb( const geometry_msgs::TwistConstPtr &);
 
     void check_and_set_motor_state();
-    void cmdmotor_state( const p2os_driver::MotorStateConstPtr &);
+    void cmdmotor_state( const p2os_msgs::MotorStateConstPtr &);
 
     void check_and_set_gripper_state();
-    void gripperCallback(const p2os_driver::GripperStateConstPtr &msg);
+    void gripperCallback(const p2os_msgs::GripperStateConstPtr &msg);
     double get_pulse() {return pulse;}
 
 		// diagnostic messages
@@ -118,7 +118,7 @@ class P2OSNode
  
     diagnostic_updater::Updater diagnostic_;
 
-    diagnostic_updater::DiagnosedPublisher<p2os_driver::BatteryState> batt_pub_;
+    diagnostic_updater::DiagnosedPublisher<p2os_msgs::BatteryState> batt_pub_;
     ros::Publisher pose_pub_, mstate_pub_, grip_state_pub_,
       ptz_state_pub_, sonar_pub_, aio_pub_, dio_pub_;
     ros::Subscriber cmdvel_sub_, cmdmstate_sub_, gripper_sub_, ptz_cmd_sub_;
@@ -156,8 +156,8 @@ class P2OSNode
 
   public:
     geometry_msgs::Twist cmdvel_;
-    p2os_driver::MotorState    cmdmotor_state_;
-    p2os_driver::GripperState gripper_state_;
+    p2os_msgs::MotorState    cmdmotor_state_;
+    p2os_msgs::GripperState gripper_state_;
     ros_p2os_data_t p2os_data;
 };
 
