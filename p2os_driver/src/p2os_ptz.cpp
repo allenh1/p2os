@@ -20,8 +20,8 @@
  *
  */
 
-#include "../include/p2os_ptz.h"
-#include "../include/p2os.h"
+#include <p2os_driver/p2os_ptz.h>
+#include <p2os_driver/p2os.h>
 
 //
 // Constants
@@ -159,9 +159,9 @@ void P2OSPtz::shutdown()
   ROS_INFO("PTZ camera has been shutdown");
 }
 
-void P2OSPtz::callback(const p2os_driver::PTZStateConstPtr &cmd)
+void P2OSPtz::callback(const p2os_msgs::PTZStateConstPtr &cmd)
 {
-  p2os_driver::PTZState to_send;
+  p2os_msgs::PTZState to_send;
   bool change_pan_tilt = false;
   bool change_zoom = false;
   to_send.pan = pan_;
