@@ -1,7 +1,7 @@
 <package>
   <name>p2os_launch</name>
-  <version>1.0.9</version>
-  <description>This package contains launch and config files designed for use with the p2os stack.</description>
+  <version>1.0.10</version>
+  <description>Launch and config files designed for use with the p2os stack.</description>
   <!-- <maintainer>Edward</maintainer> -->
 
   <license>BSD</license>

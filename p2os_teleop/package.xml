@@ -1,7 +1,7 @@
 <package>
   <name>p2os_teleop</name>
-  <version>1.0.9</version>
-  <description>p2os_teleop</description>
+  <version>1.0.10</version>
+  <description>A teleoperation node for the p2os_driver package.</description>
   <license>BSD</license>
 
   <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>

@@ -1,6 +1,6 @@
 <package>
   <name>p2os_urdf</name>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <description>URDF file descriptions for P2OS/ARCOS robot</description>
   <!-- <maintainer>Edward</maintainer> -->
 
@@ -25,12 +25,14 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>urdf</build_depend>
   <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
   <build_depend>message_generation</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>robot_state_publisher</build_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>geometry_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
   <run_depend>urdf</run_depend>
   <run_depend>message_runtime</run_depend>
   <run_depend>std_msgs</run_depend>

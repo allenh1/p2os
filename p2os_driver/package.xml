@@ -1,18 +1,20 @@
+<?xml version="1.0"?>
 <package>
   <name>p2os_driver</name>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <description>Driver file descriptions for P2OS/ARCOS robot</description>
-  <!-- <maintainer>Edward</maintainer> -->
 
   <license>BSD</license>
 
-  <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>
-  <!-- <url type="bugtracker"></url> -->
+  <url type="website">http://ros.org/wiki/p2os_driver</url>
+  <url type="bugtracker">https://github.com/allenh1/p2os/issues/</url>
+  <url type="repository">https://github.com/allenh1/p2os/</url>  
 
   <maintainer email="hunter.allen@vanderbilt.edu">Hunter Allen</maintainer>
 
   <author email="hunter.allen@Vanderbilt.edu">Hunter Allen</author>
   <author email="dfseifer@usc.edu">David Feil-Seifer</author>
+  <author email="asynodin@mech.upatras.gr">Aris Synodinos</author>
   <author>Brian Gerkey</author>
   <author>Kasper Stoy</author>
   <author>Richard Vaughan</author>
@@ -24,18 +26,19 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>std_msgs</build_depend>
-  <build_depend>message_generation</build_depend>
+  <build_depend>p2os_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>tf</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>nav_msgs</build_depend>
   <build_depend>diagnostic_updater</build_depend>
+
   <run_depend>diagnostic_updater</run_depend>
+  <run_depend>p2os_msgs</run_depend>
   <run_depend>nav_msgs</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>geometry_msgs</run_depend>
-  <run_depend>message_runtime</run_depend>
   <run_depend>std_msgs</run_depend>
 
 </package>
