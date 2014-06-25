@@ -2,6 +2,11 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* General cleanup and fixing issues with the code
+* Contributors: Aris Synodinos
+
 1.0.10 (2014-05-28)
 -------------------
 * Added issue tracker to package.xml for telop

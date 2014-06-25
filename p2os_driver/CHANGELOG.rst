@@ -2,6 +2,15 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated to match indigo-devel
+* Fixed dependency issues and cleaned up package.xml and CMakeLists.txt for p2os_driver and p2os_msgs
+* Separated p2os_driver and p2os_msgs
+* Fixed include paths of p2os_driver
+* General cleanup and fixing issues with the code
+* Contributors: Aris Synodinos, Hunter Allen
+
 1.0.11 (2014-06-25)
 -------------------
 
