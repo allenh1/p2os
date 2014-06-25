@@ -79,8 +79,8 @@ int main( int argc, char** argv )
   {
     ROS_WARN( "p2os shutdown failed... your robot might be heading for the wall?" );
   }
+  delete p; //delete pointer
 
   ROS_INFO( "Quitting... " );
   return 0;
-
 }
