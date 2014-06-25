@@ -1,6 +1,6 @@
 <package>
   <name>p2os_teleop</name>
-  <version>1.0.10</version>
+  <version>1.0.11</version>
   <description>A teleoperation node for the p2os_driver package.</description>
   <license>BSD</license>
 
