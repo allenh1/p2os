@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.12 (2014-06-25)
+-------------------
 * Updated to match indigo-devel
 * General cleanup and fixing issues with the code
 * Contributors: Aris Synodinos, Hunter Allen

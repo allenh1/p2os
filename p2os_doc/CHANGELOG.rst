@@ -2,8 +2,8 @@
 Changelog for package p2os_doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.12 (2014-06-25)
+-------------------
 * Updated to match indigo-devel
 * Contributors: Hunter Allen
 
