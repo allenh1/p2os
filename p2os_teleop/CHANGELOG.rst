@@ -2,6 +2,9 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.11 (2014-06-25)
+-------------------
+
 1.0.10 (2014-05-28)
 -------------------
 * Added issue tracker to package.xml for telop
