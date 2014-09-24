@@ -5,7 +5,6 @@ find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs sensor_
 
 catkin_package(
     CATKIN_DEPENDS message_runtime robot_state_publisher urdf geometry_msgs sensor_msgs std_msgs
-    LIBRARIES lib
 )
 
 include_directories(
