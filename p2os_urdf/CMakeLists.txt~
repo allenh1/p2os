@@ -19,13 +19,6 @@ install(TARGETS p2os_publisher
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-add_executable(p2os_publisher_3at src/publisher3at.cc)
-target_link_libraries(p2os_publisher_3at ${catkin_LIBRARIES})
-
-install(TARGETS p2os_publisher_3at
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
 install(DIRECTORY 
    launch defs meshes models
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
