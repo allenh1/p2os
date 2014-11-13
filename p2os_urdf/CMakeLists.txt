@@ -20,9 +20,11 @@ install(TARGETS p2os_publisher
 )
 
 add_executable(p2os_publisher_3at src/publisher3at.cc)
+add_executable(p2os_publisher_3dx src/publisher3dx.cc)
 target_link_libraries(p2os_publisher_3at ${catkin_LIBRARIES})
+target_link_libraries(p2os_publisher_3dx ${catkin_LIBRARIES})
 
-install(TARGETS p2os_publisher_3at
+install(TARGETS p2os_publisher_3at p2os_publisher_3dx
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
