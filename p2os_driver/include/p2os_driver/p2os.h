@@ -152,6 +152,8 @@ class P2OSNode
     SIP* sippacket;
     std::string psos_serial_port;
     std::string psos_tcp_host;
+    std::string odom_frame_id;
+    std::string base_link_frame_id;
     int         psos_fd;
     bool        psos_use_tcp;
     int         psos_tcp_port;

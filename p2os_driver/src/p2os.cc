@@ -44,6 +44,8 @@ P2OSNode::P2OSNode( ros::NodeHandle nh ) :
 
   // Use sonar
   ros::NodeHandle n_private("~");
+  n_private.param(std::string("odom_frame_id"), odom_frame_id,std::string("odom"));
+  n_private.param(std::string("base_link_frame_id"), base_link_frame_id,std::string("base_link"));
   n_private.param("use_sonar", use_sonar_, false);
 
   // read in config options
@@ -509,6 +511,8 @@ int P2OSNode::Setup()
   if(!sippacket)
   {
     sippacket = new SIP(param_idx);
+    sippacket->odom_frame_id = odom_frame_id;
+    sippacket->base_link_frame_id = base_link_frame_id;
   }
 /*
   sippacket->x_offset = 0;

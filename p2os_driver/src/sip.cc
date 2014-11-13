@@ -64,8 +64,8 @@ void SIP::FillStandard(ros_p2os_data_t* data)
   }
 
   // timestamps get set in the p2os::StandardSIPPutData fcn
-  data->position.header.frame_id = "odom";
-  data->position.child_frame_id = "base_link";
+  data->position.header.frame_id = odom_frame_id;
+  data->position.child_frame_id = base_link_frame_id;
 
   data->position.pose.pose.position.x = px;
   data->position.pose.pose.position.y = py;
