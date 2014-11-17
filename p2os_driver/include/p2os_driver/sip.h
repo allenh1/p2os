@@ -60,7 +60,7 @@ class SIP
   public:
     // these values are returned in every standard SIP
     bool lwstall, rwstall;
-		unsigned char  motors_enabled, sonar_flag;
+	unsigned char  motors_enabled, sonar_flag;
     unsigned char status, battery, sonarreadings, analog, digin, digout;
     unsigned short ptu, compass, timer, rawxpos;
     unsigned short rawypos, frontbumpers, rearbumpers;
@@ -68,6 +68,8 @@ class SIP
     unsigned short *sonars;
     int xpos, ypos;
     int x_offset,y_offset,angle_offset;
+    std::string odom_frame_id;
+    std::string base_link_frame_id;
 
     // these values are returned in a CMUcam serial string extended SIP
     // (in host byte-order)
