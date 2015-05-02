@@ -2,6 +2,11 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* this fixes issue `#30 <https://github.com/allenh1/p2os/issues/30>`_
+* Contributors: Guy Burroughes
+
 1.0.12 (2014-06-25)
 -------------------
 * General cleanup and fixing issues with the code

@@ -9,9 +9,9 @@
   <url type="website">http://ros.org/wiki/p2os-vanderbilt</url>
   <!-- <url type="bugtracker"></url> -->
 
-  <maintainer email="hunter.allen@vanderbilt.edu">Hunter Allen</maintainer>
+  <maintainer email="allen286@purdue.edu">Hunter Allen</maintainer>
 
-  <author email="hunter.allen@Vanderbilt.edu">Hunter Allen</author>
+  <author email="allen286@purdue.edu">Hunter Allen</author>
   <author email="dfseifer@usc.edu">David Feil-Seifer</author>
   <author>Brian Gerkey</author>
   <author>Kasper Stoy</author>

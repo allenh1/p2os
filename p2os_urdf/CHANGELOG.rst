@@ -2,6 +2,18 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Pioneer-3dx circus bug is now fixed. Now to get it to move... We'll see.
+* Updated the publisher to include pioneer-3dx frames.
+* this fixes issue `#30 <https://github.com/allenh1/p2os/issues/30>`_
+* removed gedit stuff
+* fixed urdf pros publisher
+* Removed unnecessary lib install.
+  The line broke things and did nothing, so... Ya. It's gone now.
+* Fixed launch
+* Contributors: Guy Burroughes, Hunter Allen, Isura Ranatunga
+
 1.0.12 (2014-06-25)
 -------------------
 * Updated to match indigo-devel
