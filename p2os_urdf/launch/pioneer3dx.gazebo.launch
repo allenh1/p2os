@@ -1,17 +1,17 @@
+<?xml version="1.0"?>
 <launch>
 
-  <include file="$(find gazebo_worlds)/launch/empty_world.launch"/>
+	<include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"/>
 
-  <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"/>
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+	    <param name="publish_frequency" type="double" value="30.0"/>
+	    <param name="tf_prefix" type="string" value=""/>
+ 	</node>
+
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
-  <node name="spawn_pioneer" pkg="gazebo" type="spawn_model" args="-z 0.051 -urdf -param robot_description -model robot_description" respawn="false" output="screen" />
-
-  <!-- Controller Manager -->
-  <include file="$(find pr2_controller_manager)/controller_manager.launch" />
-
-  <!-- load controllers -->
-  <node name="diffdrive" pkg="gazebo_plugins" type="gazebo_ros_diffdrive" respawn="true" output="screen"/>
-
+  <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-z 0.1 -urdf -param robot_description -model robot_description" respawn="false" output="screen" />
 
 </launch>
