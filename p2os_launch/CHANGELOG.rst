@@ -2,8 +2,8 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.13 (2015-05-02)
+-------------------
 * Oops. Should have caught that by now probably.
 * Contributors: Hunter Allen
 

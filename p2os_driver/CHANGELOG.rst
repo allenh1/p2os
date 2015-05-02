@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.13 (2015-05-02)
+-------------------
 * Added parameters the p2os node to specify frame IDs for the odom->base_link transform.
 * Contributors: Damjan Miklic
 
