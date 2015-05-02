@@ -2,6 +2,15 @@
 Changelog for package p2os_teleop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated to current status.
+* General cleanup and fixing issues with the code
+* 1.0.10
+* Updated changelogs
+* Added issue tracker to package.xml for telop
+* Contributors: Aris Synodinos, Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 * this fixes issue `#30 <https://github.com/allenh1/p2os/issues/30>`_

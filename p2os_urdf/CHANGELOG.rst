@@ -2,6 +2,16 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated to current status.
+* General cleanup and fixing issues with the code
+* 1.0.10
+* Updated changelogs
+* Added meshes directory to CMake install dir.
+* Removed unneccessary files
+* Contributors: Aris Synodinos, Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 * Pioneer-3dx circus bug is now fixed. Now to get it to move... We'll see.
