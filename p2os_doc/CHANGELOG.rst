@@ -2,6 +2,11 @@
 Changelog for package p2os_doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated inigo repository
+* Contributors: Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 

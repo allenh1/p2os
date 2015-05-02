@@ -2,6 +2,12 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated inigo repository
+* General cleanup and fixing issues with the code
+* Contributors: Aris Synodinos, Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 * Pioneer-3dx circus bug is now fixed. Now to get it to move... We'll see.
