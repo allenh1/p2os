@@ -2,6 +2,20 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.13 (2015-05-02)
+-------------------
+* Oops. Should have caught that by now probably.
+* Contributors: Hunter Allen
+
+1.0.12 (2014-06-25)
+-------------------
+* Updated to match indigo-devel
+* General cleanup and fixing issues with the code
+* Contributors: Aris Synodinos, Hunter Allen
+
+1.0.11 (2014-06-25)
+-------------------
+
 1.0.10 (2014-05-28)
 -------------------
 
