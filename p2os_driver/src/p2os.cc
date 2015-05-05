@@ -237,7 +237,7 @@ void P2OSNode::check_and_set_vel()
     }
     else
     {
-      ROS_WARN( "speed demand thresholded! (true: %u, max: %u)", absSpeedDemand, motor_max_speed );
+      ROS_WARN("speed demand thresholded! (true: %u, max: %u)", absSpeedDemand, motor_max_speed );
       motorcommand[2] = motor_max_speed & 0x00FF;
       motorcommand[3] = (motor_max_speed & 0xFF00) >> 8;
     }

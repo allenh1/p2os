@@ -23,19 +23,16 @@
 
 
 #include <p2os_driver/kinecalc.h>
-
 #include <math.h>
+#include <iostream>
 
-#include <stdio.h>
-
-KineCalc::KineCalc (void)
+KineCalc::KineCalc()
+  : link1(0.06875f),
+    link2(0.16f),
+    link3(0.0f),
+    link4(0.13775f),
+    link5(0.11321f)
 {
-  link1 = 0.06875f;
-  link2 = 0.16f;
-  link3 = 0.0f;
-  link4 = 0.13775f;
-  link5 = 0.11321f;
-
   endEffector.p.x = 0.0f; endEffector.p.y = 0.0f; endEffector.p.z = 0.0f;
   endEffector.n.x = 0.0f; endEffector.n.y = 0.0f; endEffector.n.z = 0.0f;
   endEffector.o.x = 0.0f; endEffector.o.y = -1.0f; endEffector.o.z = 1.0f;
@@ -131,7 +128,7 @@ KineVector KineCalc::Normalise (const KineVector &vector)
   }
   else
   {
-    printf ("P2OS: Tried to normalise a vector of zero length.");
+    std::cout<<"P2OS: Tried to normalise a vector of zero length."<<std::endl;
     result.x = 0;
     result.y = 0;
     result.z = 0;
@@ -147,7 +144,7 @@ KineVector KineCalc::CalculateN (const EndEffector &pose)
   result.z = pose.o.x * pose.a.y - pose.a.x * pose.o.y;
   if (result.x == 0 && result.y == 0 && result.z == 0)
   {
-    printf ("P2OS: Approach and orientation cannot be the same vector - their cross product cannot be zero.");
+    std::cout<<"P2OS: Approach and orientation cannot be the same vector - their cross product cannot be zero."<<std::endl;
     // Ensures that a different orientation vector is created
     KineVector orient;
     if (pose.a.y == 0 && pose.a.z == 0)
@@ -171,11 +168,10 @@ KineVector KineCalc::CalculateN (const EndEffector &pose)
 
 void KineCalc::PrintEndEffector (const EndEffector &endEffector)
 {
-  printf ("P: (%f, %f, %f)\tA: (%f, %f, %f)\tO: (%f, %f, %f)\tN: (%f, %f, %f)\n",
-          endEffector.p.x, endEffector.p.y, endEffector.p.z,
-          endEffector.a.x, endEffector.a.y, endEffector.a.z,
-          endEffector.o.x, endEffector.o.y, endEffector.o.z,
-          endEffector.n.x, endEffector.n.y, endEffector.n.z);
+std::cout<<"P: ("endEffector.p.x<<", "<<endEffector.p.y<<", "<<endEffector.p.z<<")\t"
+         <<"A: "<<endEffector.a.x<<", "<<endEffector.a.y<<", "<<endEffector.a.z<<")\t"
+         <<"O: "<<endEffector.o.x<<", "<<endEffector.o.y<<", "<<endEffector.o.z<<")\t"
+         <<"N: "<<endEffector.n.x<<", "<<endEffector.n.y<<", "<<endEffector.n.z<<")"<<std::endl;
 }
 
 
