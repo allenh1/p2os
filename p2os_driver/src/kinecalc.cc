@@ -168,7 +168,7 @@ KineVector KineCalc::CalculateN (const EndEffector &pose)
 
 void KineCalc::PrintEndEffector (const EndEffector &endEffector)
 {
-std::cout<<"P: ("endEffector.p.x<<", "<<endEffector.p.y<<", "<<endEffector.p.z<<")\t"
+std::cout<<"P: ("<<endEffector.p.x<<", "<<endEffector.p.y<<", "<<endEffector.p.z<<")\t"
          <<"A: "<<endEffector.a.x<<", "<<endEffector.a.y<<", "<<endEffector.a.z<<")\t"
          <<"O: "<<endEffector.o.x<<", "<<endEffector.o.y<<", "<<endEffector.o.z<<")\t"
          <<"N: "<<endEffector.n.x<<", "<<endEffector.n.y<<", "<<endEffector.n.z<<")"<<std::endl;
