@@ -55,6 +55,7 @@
  *    powerbot.p
  *    psos1m.p
  *    psos1x.p
+ *    p3dx-sh-lms1xx.p
 */
 #include <p2os_driver/robot_params.h>
 
@@ -2149,4 +2150,5 @@ initialize_robot_params(void)
   PlayerRobotParams[26] =  psos1m_params;
   PlayerRobotParams[27] =  psos1x_params;
   PlayerRobotParams[28] =  amigo_sh_params;
+  PlayerRobotParams[29] =  p3dx_sh_lms1xx_params;
 }
