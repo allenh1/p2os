@@ -55,6 +55,7 @@
  *    powerbot.p
  *    psos1m.p
  *    psos1x.p
+ *    p3dx-sh-lms1xx.p
 */
 
 #ifndef _ROBOT_PARAMS_H
@@ -64,7 +65,7 @@
 void initialize_robot_params(void);
 
 
-#define PLAYER_NUM_ROBOT_TYPES 29
+#define PLAYER_NUM_ROBOT_TYPES 30
 
 // Default max speeds
 #define MOTOR_DEF_MAX_SPEED 0.5
