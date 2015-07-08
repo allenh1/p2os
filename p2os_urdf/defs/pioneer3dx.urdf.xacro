@@ -269,11 +269,9 @@
     <!-- this publishes empty joint_states due to no transmission, but
          triggering robot_state_puublisher to publish tf between fixed joints in erratic,
          (e.g. base_laser_link for the base_scan frame) -->
-	<controller:gazebo_ros_controller_manager name="gazebo_ros_controller_manager" plugin="libgazebo_ros_controller_manager.so">
-		<alwaysOn>true</alwaysOn>
-		<updateRate>1000.0</updateRate>
-		<interface:audio name="gazebo_ros_controller_manager_dummy_iface" />
-	</controller:gazebo_ros_controller_manager>
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+		<robotNamespace>/p3dx</robotNamespace>
+	</plugin>
 </gazebo>
 
 </robot>
