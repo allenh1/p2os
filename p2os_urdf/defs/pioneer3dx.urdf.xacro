@@ -72,10 +72,10 @@
 <!-- Swivel -->
 	<link name="swivel">
 		<inertial>
-			<mass value="0"/>	
+			<mass value="0.1"/>	
 			<origin xyz="0 0 0"/>
-			<inertia ixx="1" ixy="0" ixz="0"
-				 iyy="1" iyz="0" izz="1"/>
+			<inertia ixx="0.01" ixy="0" ixz="0"
+				 iyy="1" iyz="0" izz="0.01"/>
   	 	</inertial>
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
@@ -98,7 +98,7 @@
 		<origin xyz="-0.185 0 0.055" rpy="0 0 0"/>
 		<axis xyz="0 0 1" />
 		<anchor xyz="0 0 0" />
-		<limit effort="100" velocity="100" />
+		<limit effort="100" velocity="100" k_velocity="0" />
 		<joint_properties damping="0.0" friction="0.0" />
 		<parent link="base_link"/>
 		<child link="swivel"/>
@@ -240,36 +240,38 @@
   	</create>
 
 <gazebo>
-	<controller:differential_position2d name="controller1">
-		<update>100</update>
-		<leftJoint>base_left_wheel_joint</leftJoint>
-		<rightJoint>base_right_wheel_joint</rightJoint>
-		<wheelSeparation>0.158</wheelSeparation>
-		<wheelDiameter>0.12</wheelDiameter>
-		<torque>5</torque>
-		<interface:position name="position_iface_0"/>
-	</controller:differential_position2d>
+	<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+			<alwaysOn>true</alwaysOn>
+			<updateRate>100</updateRate>
+			<leftJoint>base_right_wheel_joint</leftJoint>
+			<rightJoint>base_left_wheel_joint</rightJoint>
+			<wheelSeparation>0.39</wheelSeparation>
+			<wheelDiameter>0.15</wheelDiameter>
+			<torque>5</torque>
+			<commandTopic>p3dx/cmd_vel</commandTopic>
+			<odometryTopic>p3dx/odom</odometryTopic>
+			<odometryFrame>odom</odometryFrame>
+			<robotBaseFrame>base_link</robotBaseFrame>
+		</plugin>
+	</gazebo>
   
-	<controller:gazebo_ros_p3d name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
+	<plugin name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
 		<alwaysOn>true</alwaysOn>
 		<updateRate>100.0</updateRate>
 		<bodyName>base_link</bodyName>
-		<topicName>base_pose_ground_truth</topicName>
+		<topicName>p3dx/base_pose_ground_truth</topicName>
 		<gaussianNoise>0.01</gaussianNoise>
 		<frameName>map</frameName>
-		<xyzOffsets>25.7 25.7 0</xyzOffsets> <!-- initialize odometry for fake localization-->
+		<xyzOffsets>0 0 0</xyzOffsets> <!-- initialize odometry for fake localization-->
 		<rpyOffsets>0 0 0</rpyOffsets>
-		<interface:position name="p3d_base_position"/>
-	</controller:gazebo_ros_p3d>
+	</plugin>
 
     <!-- this publishes empty joint_states due to no transmission, but
          triggering robot_state_puublisher to publish tf between fixed joints in erratic,
          (e.g. base_laser_link for the base_scan frame) -->
-	<controller:gazebo_ros_controller_manager name="gazebo_ros_controller_manager" plugin="libgazebo_ros_controller_manager.so">
-		<alwaysOn>true</alwaysOn>
-		<updateRate>1000.0</updateRate>
-		<interface:audio name="gazebo_ros_controller_manager_dummy_iface" />
-	</controller:gazebo_ros_controller_manager>
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+		<robotNamespace>/p3dx</robotNamespace>
+	</plugin>
 </gazebo>
 
 </robot>

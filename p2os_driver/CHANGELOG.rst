@@ -2,6 +2,13 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2015-07-11)
+------------------
+* Doing some cleanup of the code.
+* Additional code updates for p3dx-sh-lms1xx parameters.
+* Added robot parameters for the P3DX models that ship with LMS1xx lasers.
+* Contributors: Damjan Miklic, Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 * Added parameters the p2os node to specify frame IDs for the odom->base_link transform.

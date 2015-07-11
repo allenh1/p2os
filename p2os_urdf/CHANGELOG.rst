@@ -2,6 +2,12 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2015-07-11)
+------------------
+* Forgot a line.
+* Working on Pioneer-3dx Gazebo.
+* Contributors: Hunter Allen
+
 1.0.13 (2015-05-02)
 -------------------
 * Pioneer-3dx circus bug is now fixed. Now to get it to move... We'll see.
