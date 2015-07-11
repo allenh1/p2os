@@ -2,8 +2,8 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2015-07-11)
+------------------
 * Doing some cleanup of the code.
 * Contributors: Hunter Allen
 

@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2015-07-11)
+------------------
 * Doing some cleanup of the code.
 * Additional code updates for p3dx-sh-lms1xx parameters.
 * Added robot parameters for the P3DX models that ship with LMS1xx lasers.

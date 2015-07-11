@@ -2,8 +2,8 @@
 Changelog for package p2os_doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.1 (2015-07-11)
+------------------
 * Forgot to update my email on p2os_doc's package.xml file. Oops. It's better now.
 * Contributors: Hunter Allen
 
