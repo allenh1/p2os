@@ -2,6 +2,11 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fixed a small issue (but a big problem) in the source.
+* Contributors: Hunter Allen
+
 2.0.1 (2015-07-11)
 ------------------
 * Doing some cleanup of the code.
