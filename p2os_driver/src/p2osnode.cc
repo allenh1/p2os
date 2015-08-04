@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     
     P2OSNode *p = new P2OSNode(n);
     
-    if(!(p->Setup()))
+    if(p->Setup())
     {
         ROS_ERROR("p2os setup failed...");
         return -1;
