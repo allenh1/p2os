@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     
     P2OSNode *p = new P2OSNode(n);
     
-    if(p->Setup())
+    if(!p->Setup())
     {
         ROS_ERROR("p2os setup failed...");
         return -1;
@@ -46,6 +46,8 @@ int main(int argc, char** argv)
     p->ResetRawPositions();
     
     ros::Time lastTime;
+
+    ros::Rate loop(100);
     
     while(ros::ok())
     {
@@ -72,14 +74,15 @@ int main(int argc, char** argv)
         // is no data waiting this will sit around waiting until one comes
         p->SendReceive(NULL,true);
         p->updateDiagnostics();
+
+        loop.sleep();
         ros::spinOnce();
     }
     
     if(!p->Shutdown())
-    {
         ROS_WARN("p2os shutdown failed... your robot might be heading for the wall?");
-    }
-    delete p; //delete pointer
+    
+    delete p;
     
     ROS_INFO( "Quitting... " );
     return 0;

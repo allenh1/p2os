@@ -306,7 +306,7 @@ int P2OSNode::Setup()
                              O_RDWR | O_SYNC | O_NONBLOCK, S_IRUSR | S_IWUSR )) < 0 )
     {
         ROS_ERROR("P2OS::Setup():open():");
-        return(1);
+        return 0;
     }
     
     if(tcgetattr( this->psos_fd, &term ) < 0 )
@@ -314,7 +314,7 @@ int P2OSNode::Setup()
         ROS_ERROR("P2OS::Setup():tcgetattr():");
         close(this->psos_fd);
         this->psos_fd = -1;
-        return(1);
+        return 0;
     }
     
     cfmakeraw( &term );
@@ -326,7 +326,7 @@ int P2OSNode::Setup()
         ROS_ERROR("P2OS::Setup():tcsetattr():");
         close(this->psos_fd);
         this->psos_fd = -1;
-        return(1);
+        return 0;
     }
     
     if(tcflush(this->psos_fd, TCIOFLUSH ) < 0)
@@ -334,7 +334,7 @@ int P2OSNode::Setup()
         ROS_ERROR("P2OS::Setup():tcflush():");
         close(this->psos_fd);
         this->psos_fd = -1;
-        return(1);
+        return 0;
     }
     
     if((flags = fcntl(this->psos_fd, F_GETFL)) < 0)
@@ -342,7 +342,7 @@ int P2OSNode::Setup()
         ROS_ERROR("P2OS::Setup():fcntl()");
         close(this->psos_fd);
         this->psos_fd = -1;
-        return(1);
+        return 0;
     }
     // Sync:
     
@@ -364,7 +364,7 @@ int P2OSNode::Setup()
                 ROS_ERROR("P2OS::Setup():fcntl()");
                 close(this->psos_fd);
                 this->psos_fd = -1;
-                return(1);
+                return 0;
             }
             command = SYNC1;
             packet.Build(&command, 1);
@@ -401,7 +401,7 @@ int P2OSNode::Setup()
                         ROS_ERROR("P2OS::Setup():tcsetattr():");
                         close(this->psos_fd);
                         this->psos_fd = -1;
-                        return(1);
+                        return 0;
                     }
                     
                     if(tcflush(this->psos_fd, TCIOFLUSH ) < 0 )
@@ -409,7 +409,7 @@ int P2OSNode::Setup()
                         ROS_ERROR("P2OS::Setup():tcflush():");
                         close(this->psos_fd);
                         this->psos_fd = -1;
-                        return(1);
+                        return 0;
                     }
                     num_sync_attempts = 3;
                     continue;
@@ -462,7 +462,7 @@ int P2OSNode::Setup()
                      this->psos_use_tcp ? this->psos_tcp_host.c_str() : this->psos_serial_port.c_str());
         close(this->psos_fd);
         this->psos_fd = -1;
-        return(1);
+        return 0;
     }
     cnt = 4;
     cnt += snprintf(name, sizeof(name), "%s", &receivedpacket.packet[cnt]);
@@ -653,7 +653,7 @@ int P2OSNode::Setup()
     }
     ptz_.setup();
     
-    return(0);
+    return 1;
 }
 
 int P2OSNode::Shutdown()
