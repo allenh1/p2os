@@ -1,7 +1,7 @@
 /*
  * Software License Agreement (BSD License)
  *
- *  Hunter Allen <hunter.allen@vanderbilt.edu>
+ *  Hunter Allen <allen286@purdue.edu>
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -38,48 +38,41 @@
 #include <tf/transform_broadcaster.h>
 #include <kdl_parser/kdl_parser.hpp>
 
-int main( int argc, char* argv[] )
+int main(int argc, char** argv)
 {
-  	ros::init(argc, argv, "state_publisher" );
-  	ros::NodeHandle n;
+	ros::init(argc, argv, "state_publisher");
+	ros::NodeHandle n;
 
-  	ros::Publisher joint_state_publisher = n.advertise<sensor_msgs::JointState>("joint_states",1000);
+	ros::Publisher joint_state_publisher = n.advertise<sensor_msgs::JointState>("joint_states",1000);
+	ros::Rate loop_rate(100);
 
- 	tf::TransformBroadcaster broadcaster;
-    ros::Rate loop_rate(30);
+	// message declarations
+	sensor_msgs::JointState joint_state;
 
-    // message declarations
-    geometry_msgs::TransformStamped odom_trans;
-    sensor_msgs::JointState joint_state;
-    //odom_trans.header.frame_id = "base_link";
-    //odom_trans.child_frame_id = "";
+	while (ros::ok())
+	{
+		joint_state.header.stamp = ros::Time::now();
+		joint_state.name.resize(4); //Pioneer has 4 joint state definitions.
+		joint_state.position.resize(4);
 
-  while (ros::ok())
-  {
-  	joint_state.header.stamp = ros::Time::now();
-  	joint_state.name.resize(4); //Pioneer has 4 joint state definitions. 
-  	joint_state.position.resize(4);
+		joint_state.name[0] = "p3dx_back_right_wheel_joint";
+		joint_state.position[0] = 0;
 
-  	joint_state.name[0] = "p3dx_back_right_wheel_joint";
-  	joint_state.position[0] = 0;
+		joint_state.name[1] = "p3dx_back_left_wheel_joint";
+		joint_state.position[1] = 0;
 
-  	joint_state.name[1] = "p3dx_back_left_wheel_joint";
-  	joint_state.position[1] = 0;
+		joint_state.name[2] = "p3dx_front_left_wheel_joint";
+		joint_state.position[2] = 0;
 
-  	joint_state.name[2] = "p3dx_front_left_wheel_joint";
-  	joint_state.position[2] = 0;
+		joint_state.name[3] = "p3dx_front_right_wheel_joint";
+		joint_state.position[3] = 0;
 
-  	joint_state.name[3] = "p3dx_front_right_wheel_joint";
-  	joint_state.position[3] = 0; 
+		//send the joint state information
+		joint_state_publisher.publish(joint_state);
 
-    //odom_trans.header.stamp = ros::Time::now();
-  	//send the joint state information
-  	joint_state_publisher.publish(joint_state);
-    //broadcaster.sendTransform(odom_trans);
+		//adjust loop each iteration.
+		loop_rate.sleep();
+	}//loop while ROS is functioning.
 
-  	//adjust loop each iteration.
-  	loop_rate.sleep();
-  }//the things ros will do
-
-  return 0; 
+ 	return 0;
 }//end main
