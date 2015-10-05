@@ -52,8 +52,8 @@ int main(int argc, char** argv)
 	while (ros::ok())
 	{
 		joint_state.header.stamp = ros::Time::now();
-		joint_state.name.resize(4); //Pioneer has 4 joint state definitions.
-		joint_state.position.resize(4);
+		joint_state.name.resize(5); //Pioneer has 4 joint state definitions.
+		joint_state.position.resize(5);
 
 		joint_state.name[0] = "p3dx_back_right_wheel_joint";
 		joint_state.position[0] = 0;
@@ -67,6 +67,8 @@ int main(int argc, char** argv)
 		joint_state.name[3] = "p3dx_front_right_wheel_joint";
 		joint_state.position[3] = 0;
 
+		joint_state.name[4] = "p3dx_base_swivel_joint";
+		joint_state.position[4] = 0;
 		//send the joint state information
 		joint_state_publisher.publish(joint_state);
 

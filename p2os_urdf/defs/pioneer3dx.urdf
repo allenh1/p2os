@@ -388,7 +388,7 @@
       <torque>5</torque>
       <interface:position name="position_iface_0"/>
     </controller:differential_position2d>
-    <controller:gazebo_ros_p3d name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
+    <controller:gazebo_ros_p3d name="p3dx_base_controller" plugin="libgazebo_ros_p3dx.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>100.0</updateRate>
       <bodyName>base_link</bodyName>
@@ -398,8 +398,8 @@
       <xyzOffsets>0 0 0</xyzOffsets>
       <!-- initialize odometry for fake localization-->
       <rpyOffsets>0 0 0</rpyOffsets>
-      <interface:position name="p3d_base_position"/>
-    </controller:gazebo_ros_p3d>
+      <interface:position name="p3dx_base_position"/>
+    </controller:gazebo_ros_p3dx>
     <!-- this publishes empty joint_states due to no transmission, but
          triggering robot_state_puublisher to publish tf between fixed joints in erratic,
          (e.g. base_laser_link for the base_scan frame) -->

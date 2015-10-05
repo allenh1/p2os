@@ -241,8 +241,9 @@
 		<parent link="p3at_front_${suffix}_hub"/>
 		<child link="p3at_front_${suffix}_wheel"/>
 	</joint>
-
+</xacro:macro>
 <!-- Back Axles + Wheels + Hubcaps -->
+<xacro:macro name="p3at_back" params="suffix reflect">
 	<link name="p3at_back_${suffix}_axle">
 		<inertial>
 			<mass value="0.1"/>	

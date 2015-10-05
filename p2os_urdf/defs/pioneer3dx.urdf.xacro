@@ -94,7 +94,7 @@
 	</collision>
 	</link>
 
- 	<joint name="base_swivel_joint" type="continuous">
+ 	<joint name="base_swivel_joint" type="fixed">
 		<origin xyz="-0.185 0 0.055" rpy="0 0 0"/>
 		<axis xyz="0 0 1" />
 		<anchor xyz="0 0 0" />
@@ -237,6 +237,7 @@
 	<create>
 	<back_sonar parent="base_link"/>
   	<top_plate  parent="base_link"/>
+  	<swivel     parent="base_link"/>
   	</create>
 
 <gazebo>
