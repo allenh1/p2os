@@ -1,7 +1,7 @@
 p2os
 ====
 
-P2OS driver for ROS versions Groovy, Hydro and Indigo.
+P2OS driver for ROS Groovy and later.
 
 p2os_driver
 -----------
