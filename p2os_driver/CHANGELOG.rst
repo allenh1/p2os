@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.3 (2015-10-25)
+------------------
 * Reformatted code style.
 * Cleaned up the driver.
 * Contributors: Hunter Allen
