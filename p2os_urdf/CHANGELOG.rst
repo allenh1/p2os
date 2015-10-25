@@ -2,6 +2,13 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Updated p2os_urdf's build dependencies. Fixes `#39 <https://github.com/allenh1/p2os/issues/39>`_
+* Updated the pioneer3at URDF xacro file. Fixes `#38 <https://github.com/allenh1/p2os/issues/38>`_
+* Cleaned up the publisher file.
+* Contributors: Hunter Allen
+
 2.0.2 (2015-08-04)
 ------------------
 
