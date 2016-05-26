@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.4 (2016-05-26)
+------------------
 * Cleaned up driver source.
 * Contributors: Hunter L. Allen
 
