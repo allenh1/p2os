@@ -2,6 +2,11 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added missing dep.
+* Contributors: Hunter L. Allen
+
 2.0.4 (2016-05-26)
 ------------------
 
