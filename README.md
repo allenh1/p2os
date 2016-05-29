@@ -50,7 +50,7 @@ Allows you to see the robot within RVIZ for navigation purposes.
 
 Jade Build:
 
-[![Build Status](http://build.ros.org/job/Jbin_uT32__p2os_urdf__ubuntu_trusty_i386__binary/1//badge/icon)](http://build.ros.org/job/Jbin_uT32__p2os_urdf__ubuntu_trusty_i386__binary/1/)
+[![Build Status](http://build.ros.org/job/Jsrc_uT__p2os_urdf__ubuntu_trusty__source/2/badge/icon)](http://build.ros.org/job/Jsrc_uT__p2os_urdf__ubuntu_trusty__source/2/)
 
 Kinetic Build:
 
