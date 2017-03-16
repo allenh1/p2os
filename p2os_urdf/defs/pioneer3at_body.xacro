@@ -373,7 +373,6 @@
 <gazebo>
   <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
     <updateRate>100.0</updateRate>
-    <robotNamespace>/</robotNamespace>
     <leftFrontJoint>p3at_front_left_wheel_joint</leftFrontJoint>
     <rightFrontJoint>p3at_front_right_wheel_joint</rightFrontJoint>
     <leftRearJoint>p3at_back_left_wheel_joint</leftRearJoint>
