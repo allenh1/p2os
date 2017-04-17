@@ -93,12 +93,6 @@
 			<color rgba="0.5 0.5 0.5 1"/>
 		</material>
 	</visual>
-	<collision>
-		<origin xyz="0 0 0" rpy="0 0 0"/>
-		<geometry>
-			<box size="0 0 0"/>
-		</geometry>
-	</collision>
 	</link>
 	<gazebo reference="swivel">
 		<material value="Gazebo/Grey"/>
@@ -291,12 +285,6 @@
 				<color rgba="0.715 0.583 0.210 1.0"/>
 			</material>
 		</visual>
-		<collision>
-			<origin xyz="0 0 0" rpy="0 0 0"/>
-			<geometry>
-				<box size="0 0 0"/>
-			</geometry>
-		</collision>
 	</link>
 
 	<gazebo reference="front_sonar">
