@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 
-<robot
-  xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
-  xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
-  xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
-  xmlns:xacro="http://ros.org/wiki/xacro"
-  >
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--<xacro:include filename="$(find p2os_urdf)/defs/materials.xacro"/>-->
 
@@ -33,14 +28,12 @@
     <collision>
       <origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
       <geometry>
-        <!--<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/${suffix}_wheel.stl"/>-->
         <cylinder radius="0.09" length="0.04"/>
       </geometry>
     </collision>
   </link>
 
   <joint name="base_${suffix}_hubcap_joint" type="fixed">
-    <!--<origin xyz="0 ${reflect*0.158} 0.091" rpy="0 0 0"/>-->
     <origin xyz="0 0 0" rpy="0 0 0"/>
 
     <parent link="p3dx_${suffix}_wheel"/>
@@ -65,6 +58,7 @@
   </visual>
   </link>
 
+  <!-- The transmission tag is used only by ros_control -->
   <!--<transmission type="pr2_mechanism_model/SimpleTransmission" name="${parent}_${suffix}_wheel_trans">
     <actuator name="base_${suffix}_wheel_motor" />
     <joint name="base_${suffix}_wheel_joint" />
