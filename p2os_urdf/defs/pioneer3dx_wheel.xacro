@@ -81,18 +81,16 @@
     <child link="p3dx_${suffix}_wheel"/>
   </joint>
 
-
   <gazebo reference="p3dx_${suffix}_hubcap">
-      <material value="Gazebo/Yellow"/>
+    <material value="Gazebo/Yellow"/>
   </gazebo>
-
 
   <gazebo reference="p3dx_${suffix}_wheel">
       <material value="Gazebo/Black"/>
-      <elem key="mu1" value="0.5" />
-      <elem key="mu2" value="50.0" />
-      <elem key="kp"  value="100000000.0" />
-      <elem key="kd"  value="1.0" />
+      <mu1>0.5</mu1>
+      <mu2>50.0</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
   </gazebo>
 
 </xacro:macro>
