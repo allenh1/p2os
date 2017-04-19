@@ -70,14 +70,6 @@
 	</joint>
 
 	<!-- Swivel -->
-	<joint name="base_swivel_joint" type="continuous">
-		<origin xyz="-0.185 0 0.055" rpy="0 0 0"/>
-		<anchor xyz="0 0 0"/>
-    	<limit effort="100" velocity="100" k_velocity="0" />
-    	<joint_properties damping="0.0" friction="0.0" />
-		<parent link="base_link"/>
-		<child link="swivel"/>
-	</joint>
 	<link name="swivel">
 		<inertial>
 			<mass value="0.1"/>	
@@ -96,8 +88,17 @@
 	</visual>
 	</link>
 	<gazebo reference="swivel">
-		<material value="Gazebo/Grey"/>
+		<material value="Gazebo/Black"/>
 	</gazebo>
+
+    <joint name="base_swivel_joint" type="continuous">
+		<origin xyz="-0.185 0 0.055" rpy="0 0 0"/>
+		<axis xyz="0 0 1"/>
+    	<limit effort="100" velocity="100" k_velocity="0" />
+    	<joint_properties damping="0.0" friction="0.0" />
+		<parent link="base_link"/>
+		<child link="swivel"/>
+	</joint>
 
 <!-- Center Wheel + Hubcap -->
 	<link name="center_hubcap">
@@ -118,7 +119,7 @@
 	</visual>
 	</link>
 	<gazebo reference="center_hubcap">
-		<material value="Gazebo/Grey"/>
+		<material value="Gazebo/Black"/>
 	</gazebo>
 
 	<joint name="swivel_hubcap_joint" type="continuous">
@@ -155,8 +156,8 @@
 		</geometry>
 	</collision>
 	</link>
-	<gazebo reference="left_hub">
-		<material value="Gazebo/Yellow"/>
+	<gazebo reference="center_wheel">
+		<material value="Gazebo/Black"/>
 	</gazebo>
 
 	<joint name="center_wheel_joint" type="fixed">
