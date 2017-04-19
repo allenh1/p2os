@@ -226,25 +226,45 @@
 		<child link="back_sonar"/>
 	</joint>
 
-	<xacro:macro name="p3dx_gazebo_ext">
 
 	<gazebo>
-	  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <!-- Robot locomotion plugin -->
+	  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+        <legacyMode>false</legacyMode>
+        <alwaysOn>true</alwaysOn>
 	    <updateRate>100.0</updateRate>
-	    <robotNamespace>/</robotNamespace>
-	    <leftFrontJoint>base_swivel_joint</leftFrontJoint>
-	    <rightFrontJoint>base_swivel_joint</rightFrontJoint>
-	    <leftRearJoint>swivel_hubcap_joint</leftRearJoint>
-	    <rightRearJoint>swivel_hubcap_joint</rightRearJoint>
-	    <wheelSeparation>0.3</wheelSeparation>
-	    <wheelDiameter>0.1</wheelDiameter>
-	    <robotBaseFrame>base_link</robotBaseFrame>
-	    <torque>200</torque>
+	    <leftJoint>base_left_wheel_joint</leftJoint>
+        <rightJoint>base_right_wheel_joint</rightJoint>
+	    <wheelSeparation>0.32</wheelSeparation>
+	    <wheelDiameter>0.18</wheelDiameter>
+	    <wheelTorque>5</wheelTorque>
+        <wheelAcceleration>0</wheelAcceleration>
+        <robotNamespace>pioneer</robotNamespace>
 	    <commandTopic>cmd_vel</commandTopic>
 	    <odometryTopic>odom</odometryTopic>
+        <odometrySource>ENCODER</odometrySource><!--Other option is World-->
 	    <odometryFrame>odom</odometryFrame>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <publishTf>1</publishTf>
+        <publishWheelTF>false</publishWheelTF>
+        <publishWheelJointState>false</publishWheelJointState>
+        <rosDebugLevel>Warn</rosDebugLevel>
 	  </plugin>
+
+      <!-- Fake localization plugin -->
+<!--      <plugin name="p3d_base_controller" plugin="libgazebo_ros_p3d.so">
+		<alwaysOn>true</alwaysOn>
+		<updateRate>100.0</updateRate>
+		<bodyName>base_link</bodyName>
+		<topicName>base_pose_ground_truth</topicName>
+		<gaussianNoise>0.01</gaussianNoise>
+		<frameName>map</frameName>-->
+        <!-- initialize odometry for fake localization-->
+<!--		<xyzOffsets>0 0 0</xyzOffsets>
+		<rpyOffsets>0 0 0</rpyOffsets>
+	  </plugin>
+-->      
 	</gazebo>
 
-	</xacro:macro>
+
 </robot>
