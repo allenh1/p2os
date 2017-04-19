@@ -34,7 +34,7 @@
       <origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
       <geometry>
         <!--<mesh filename="package://p2os_urdf/meshes/p3dx_meshes/${suffix}_wheel.stl"/>-->
-        <cylinder radius="0.09" length="0.01"/>
+        <cylinder radius="0.09" length="0.04"/>
       </geometry>
     </collision>
   </link>
