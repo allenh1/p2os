@@ -8,7 +8,7 @@
   <link name="base_link">
 	<!-- CHECK THESE VALUES. THEY MAY BE COMPLETELY WRONG. -->
 	<inertial>
-	  <mass value="40.0"/>
+	  <mass value="20.0"/>
 	  <origin xyz="-0.045 0 0.148"/>
 	  <inertia ixx="0.3338" ixy="0.0" ixz="0.0"
 			   iyy="0.4783" iyz="0.0"
