@@ -2,6 +2,9 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.0.5 (2016-05-26)
 ------------------
 * Added missing dependencies.
