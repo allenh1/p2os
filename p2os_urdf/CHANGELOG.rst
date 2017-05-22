@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.6 (2017-05-22)
+------------------
 * Change mass to more reasonable value.
 * Clean up indentation.
 * Clean up obsolete xml-schema namespaces.
