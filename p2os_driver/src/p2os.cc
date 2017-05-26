@@ -529,7 +529,7 @@ int P2OSNode::Setup()
 		accel_command[0] = SETA;
 		accel_command[1] = ARGNINT;
 		accel_command[2] =  -1 *(this->motor_max_trans_decel) & 0x00FF;
-		accel_command[3] =  -1 *(this->motor_max_trans_decel) & 0xFF00) >> 8;
+		accel_command[3] =  (-1 *(this->motor_max_trans_decel) & 0xFF00) >> 8;
 		accel_packet.Build(accel_command, 4);
 		this->SendReceive(&accel_packet,false);
     }
