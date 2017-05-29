@@ -2,8 +2,8 @@
 Changelog for package p2os_doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.6 (2017-05-22)
+------------------
 * Updated p2os_doc email address.
 * Contributors: Hunter L. Allen
 
