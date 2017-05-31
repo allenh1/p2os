@@ -2,8 +2,8 @@
 Changelog for package p2os_doc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.7 (2017-05-30)
+------------------
 * Updated changelog.
 * merged.
 * Updated package metadata, as well as added the correct c++ flags to the urdf file (for Gentoo support).

@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.7 (2017-05-30)
+------------------
 * Changed to c++11 abi
 * Updated changelog.
 * merged.

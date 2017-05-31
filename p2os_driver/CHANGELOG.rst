@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.7 (2017-05-30)
+------------------
 * Made a small change to prepare version bump.
 * Updated changelog.
 * Missed a paren.
