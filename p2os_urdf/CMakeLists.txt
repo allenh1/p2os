@@ -11,7 +11,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-set(CMAKE_CXX_FLAGS "-std=c++14")
+set(CMAKE_CXX_FLAGS "-std=c++11")
 
 add_executable(p2os_publisher src/publisher.cc)
 target_link_libraries(p2os_publisher ${catkin_LIBRARIES})
