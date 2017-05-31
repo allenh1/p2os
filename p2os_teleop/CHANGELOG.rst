@@ -4,6 +4,11 @@ Changelog for package p2os_teleop
 
 Forthcoming
 -----------
+* Updated changelog.
+* merged.
+* Updated package metadata, as well as added the correct c++ flags to the urdf file (for Gentoo support).
+* Contributors: Hunter L. Allen
+
 * merged.
 * Updated package metadata, as well as added the correct c++ flags to the urdf file (for Gentoo support).
 * Contributors: Hunter L. Allen

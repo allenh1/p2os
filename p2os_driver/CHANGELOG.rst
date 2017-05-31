@@ -4,6 +4,12 @@ Changelog for package p2os_driver
 
 Forthcoming
 -----------
+* Made a small change to prepare version bump.
+* Updated changelog.
+* Missed a paren.
+* Fixed compiler error.
+* Contributors: Hunter L. Allen
+
 * Missed a paren.
 * Fixed compiler error.
 * Contributors: Hunter L. Allen

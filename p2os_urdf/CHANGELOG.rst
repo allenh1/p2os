@@ -4,6 +4,12 @@ Changelog for package p2os_urdf
 
 Forthcoming
 -----------
+* Changed to c++11 abi
+* Updated changelog.
+* merged.
+* Updated package metadata, as well as added the correct c++ flags to the urdf file (for Gentoo support).
+* Contributors: Hunter L. Allen
+
 * merged.
 * Updated package metadata, as well as added the correct c++ flags to the urdf file (for Gentoo support).
 * Contributors: Hunter L. Allen
