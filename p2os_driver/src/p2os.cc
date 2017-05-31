@@ -238,7 +238,7 @@ void P2OSNode::check_and_set_vel()
 	motorcommand[0] = RVEL;
 	motorcommand[1] = (va >= 0) ? ARGINT : ARGNINT;
     
-	absturnRateDemand = (unsigned short)abs(va);
+	absturnRateDemand = (unsigned short) (va >= 0) ? va : (-1 * va);
 
 	if(absturnRateDemand <= motor_max_turnspeed) {
 		motorcommand[2] = absturnRateDemand & 0x00FF;
