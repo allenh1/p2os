@@ -6,7 +6,7 @@
        xmlns:xacro="http://ros.org/wiki/xacro"
 name="pioneer3at">
 
-<include filename="$(find p2os_urdf)/defs/pioneer3at_body.xacro"/>
+<xacro:include filename="$(find p2os_urdf)/defs/pioneer3at_body.xacro"/>
 
 <xacro:p3at_front suffix="left" reflect="1"/>
 <xacro:p3at_front suffix="right" reflect="-1"/>
