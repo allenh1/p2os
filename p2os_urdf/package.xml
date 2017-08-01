@@ -1,4 +1,6 @@
-<package>
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
   <name>p2os_urdf</name>
   <version>2.0.7</version>
   <description>URDF file descriptions for P2OS/ARCOS robot</description>
@@ -6,6 +8,8 @@
   <license>BSD</license>
 
   <url type="website">http://ros.org/wiki/p2os-purdue</url>
+  <url type="bugtracker">https://github.com/allenh1/p2os/issues</url>
+  <url type="repository">https://github.com/allenh1/p2os/</url>
 
   <maintainer email="hunter@openrobotics.org">Hunter L. Allen</maintainer>
 
@@ -20,19 +24,15 @@
   <author>MobileRobots Inc.</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>urdf</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>tf</build_depend>
-  <build_depend>kdl_parser</build_depend>
 
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>tf</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>urdf</run_depend>
-  <run_depend>std_msgs</run_depend>
-  <run_depend>kdl_parser</run_depend>
+  <depend>sensor_msgs</depend>
+  <depend>urdf</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf</depend>
+  <depend>kdl_parser</depend>
+
+  <exec_depend>p2os_msgs</exec_depend>
+  <exec_depend>p2os_driver</exec_depend>
 </package>
