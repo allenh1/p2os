@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.0 (2017-08-01)
+------------------
 * Small xacro fix.
 * Switch to format 2 (`#48 <https://github.com/allenh1/p2os/issues/48>`_)
   * Update p2os_launch to package.xml format 2.
