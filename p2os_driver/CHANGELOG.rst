@@ -2,6 +2,17 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Switch to format 2 (`#48 <https://github.com/allenh1/p2os/issues/48>`_)
+  * Update p2os_launch to package.xml format 2.
+  * Update p2os_driver to package.xml format 2.
+  * Update p2os_urdf to package.xml format 2.
+  * Update p2os_teleop package.xml to format 2.
+  * Update p2os_msgs to package.xml format 2.
+  * Update p2os_doc to package.xml format 2.
+* Contributors: Hunter Allen
+
 2.0.7 (2017-05-30)
 ------------------
 * Made a small change to prepare version bump.
