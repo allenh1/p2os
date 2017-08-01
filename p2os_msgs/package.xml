@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
   <name>p2os_msgs</name>
   <version>2.0.7</version>
   <description>
@@ -29,9 +30,8 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <build_depend>message_generation</build_depend>
-  <build_depend>std_msgs</build_depend>
+  <depend>message_generation</depend>
+  <depend>std_msgs</depend>
 
-  <run_depend>std_msgs</run_depend>
-  <run_depend>message_runtime</run_depend>
+  <exec_depend>message_runtime</exec_depend>
 </package>
