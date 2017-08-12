@@ -1,10 +1,14 @@
 /*
  *  P2OS for ROS
+ * Copyright (C) 2004, 2005
+ *     ActivMedia Robotics LLC
+ * Copyright (C) 2006, 2007, 2008, 2009
+ *     MobileRobots Inc.
  *  Copyright (C) 2010
  *     Tucker Hermans, David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *     Richard Vaughan, & Andrew Howard
- * Copyright (C) 2004, 2005 ActivMedia Robotics LLC
- * Copyright (C) 2006, 2007, 2008, 2009 MobileRobots Inc.
+ * Copyright (C) 2017
+ *     Open Source Robotics Foundation, Inc.
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -24,9 +28,9 @@
 #ifndef _P2OS_PTZ_H
 #define _P2OS_PTZ_H
 
-#include <p2os_msgs/PTZState.h>
-#include <p2os_driver/packet.h>
+#include <p2os_msgs/msg/ptz_state.hpp>
 #include <p2os_driver/robot_params.h>
+#include <p2os_driver/packet.h>
 
 class P2OSNode;
 

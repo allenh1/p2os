@@ -3,7 +3,8 @@
  *  Copyright (C) 2009
  *     David Feil-Seifer, Brian Gerkey, Kasper Stoy, 
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2017
+ *     Open Source Robotics Foundation, Inc
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,8 +26,9 @@
 #ifndef _PACKET_H
 #define _PACKET_H
 
-#include <string.h>
-#include <ros/ros.h>
+#include <cstring>
+
+#include <rclcpp/rclcpp.hpp>
 
 #define PACKET_LEN 256
 

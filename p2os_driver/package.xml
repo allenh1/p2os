@@ -24,16 +24,24 @@
   <author>ActivMedia Robotics LLC</author>
   <author>MobileRobots Inc.</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+  <buildtool_depend>ament_cmake_ros</buildtool_depend>
 
   <depend>std_msgs</depend>
   <depend>p2os_msgs</depend>
   <depend>geometry_msgs</depend>
-  <depend>tf</depend>
-  <depend>roscpp</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_msgs</depend>
+  <depend>tf2_srvs</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>rcutils</depend>
   <depend>nav_msgs</depend>
-  <depend>diagnostic_updater</depend>
-  <depend>kdl_parser</depend>
+  <!-- <depend>diagnostic_updater</depend> -->
+  <!-- <depend>kdl_parser</depend> -->
 
-  <exec_depend>message_runtime</exec_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
