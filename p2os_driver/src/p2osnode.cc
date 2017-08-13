@@ -23,12 +23,13 @@
 
 #include <iostream>
 
-#include <ros/ros.h>
+/* #include <ros/ros.h>
 #include <geometry_msgs/Pose.h>
-#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/PoseStamped.h> */
+#include <rclcpp/rclcpp.hpp>
 #include <p2os_driver/p2os.h>
-#include <p2os_msgs/MotorState.h>
-#include <tf/transform_datatypes.h>
+/* #include <p2os_msgs/MotorState.h>
+   #include <tf/transform_datatypes.h> */
 
 int main(int argc, char** argv)
 {

@@ -27,7 +27,6 @@
 #include <p2os_driver/packet.h>
 #include <unistd.h>
 #include <stdlib.h> /* for exit() */
-#include <ros/ros.h>
 
 void P2OSPacket::Print()
 {
