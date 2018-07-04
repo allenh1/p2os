@@ -2,6 +2,11 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Kill it with fire (`#50 <https://github.com/allenh1/p2os/issues/50>`_)
+* Contributors: Hunter Allen
+
 2.1.0 (2017-08-01)
 ------------------
 * Small xacro fix.
