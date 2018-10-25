@@ -26,7 +26,7 @@
 
 #include <limits.h>
 #include <stdint.h>
-#include <p2os_driver/p2os.h>
+#include <p2os_driver/p2os.hpp>
 
 typedef struct ArmJoint
 {

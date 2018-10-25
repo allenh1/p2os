@@ -29,8 +29,8 @@
 #include <iostream>
 #include <string.h>
 
-#include <p2os_driver/packet.h>
-#include <p2os_driver/robot_params.h>
+#include <p2os_driver/packet.hpp>
+#include <p2os_driver/robot_params.hpp>
 
 #include <ros/ros.h>
 #include <nav_msgs/Odometry.h>
@@ -72,10 +72,10 @@ typedef struct ros_p2os_data
 } ros_p2os_data_t;
 
 // this is here because we need the above typedef's before including it.
-#include "sip.h"
-#include "kinecalc.h"
+#include "sip.hpp"
+#include "kinecalc.hpp"
 
-#include "p2os_ptz.h"
+#include "p2os_ptz.hpp"
 
 class SIP;
 
