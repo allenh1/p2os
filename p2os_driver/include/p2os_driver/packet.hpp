@@ -1,7 +1,7 @@
 /*
  *  P2OS for ROS
  *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy, 
+ *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
  *
  *
@@ -30,9 +30,9 @@
 
 #define PACKET_LEN 256
 
-class P2OSPacket 
+class P2OSPacket
 {
- public:
+public:
   unsigned char packet[PACKET_LEN];
   unsigned char size;
   ros::Time timestamp;
@@ -41,17 +41,18 @@ class P2OSPacket
 
   void Print();
   void PrintHex();
-  int Build( unsigned char *data, unsigned char datasize );
-  int Send( int fd );
-  int Receive( int fd );
+  int Build(unsigned char * data, unsigned char datasize);
+  int Send(int fd);
+  int Receive(int fd);
   bool Check();
-  
-  bool operator!= ( P2OSPacket p ) {
-    if ( size != p.size) return(true);
 
-    if ( memcmp( packet, p.packet, size ) != 0 ) return (true);
+  bool operator!=(P2OSPacket p)
+  {
+    if (size != p.size) {return true;}
 
-    return(false);
+    if (memcmp(packet, p.packet, size) != 0) {return true;}
+
+    return false;
   }
 };
 

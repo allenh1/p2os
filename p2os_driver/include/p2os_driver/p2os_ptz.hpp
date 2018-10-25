@@ -33,8 +33,8 @@ class P2OSNode;
 // Circular Buffer Used by PTZ camera
 class circbuf
 {
- public:
-  circbuf(int size=512);
+public:
+  circbuf(int size = 512);
 
   void putOnBuf(unsigned char c);
   int  getFromBuf();
@@ -45,18 +45,19 @@ class circbuf
   bool gotPacket();
   void reset();
 
- private:
-  unsigned char* buf;
-  int  start;
-  int  end;
-  int  mysize;
+private:
+  unsigned char * buf;
+  int start;
+  int end;
+  int mysize;
   bool gotPack;
 };
 
 class P2OSPtz
 {
- public:
-  enum Command {
+public:
+  enum Command
+  {
     DELIM = 0x00, ///<Delimeter character
     DEVICEID = 0x30, ///<Default device ID
     PANSLEW = 0x50, ///<Sets the pan slew
@@ -87,34 +88,38 @@ class P2OSPtz
   };
 
   // the states for communication
-  enum CommState {
+  enum CommState
+  {
     COMM_UNKNOWN,
     COMM_BIDIRECTIONAL,
     COMM_UNIDIRECTIONAL
   };
 
-  enum CameraType {
+  enum CameraType
+  {
     CAMERA_VCC4,
     CAMERA_C50I
   };
 
- protected:
+protected:
   // preset limits on movements.  Based on empirical data
-  enum Param {
-    MAX_PAN = 98,		// 875 units is max pan assignment
-    MIN_PAN = -98,		// -875 units is min pan assignment
-    MAX_TILT = 88,		// 790 units is max tilt assignment
-    MIN_TILT = -30,		// -267 units is min tilt assignment
-    MAX_PAN_SLEW = 90,		// 800 positions per sec (PPS)
-    MIN_PAN_SLEW = 1,		// 8 positions per sec (PPS)
-    MAX_TILT_SLEW = 69,		// 662 positions per sec (PPS)
-    MIN_TILT_SLEW = 1,		// 8 positions per sec (PPS)
+  enum Param
+  {
+    MAX_PAN = 98,               // 875 units is max pan assignment
+    MIN_PAN = -98,              // -875 units is min pan assignment
+    MAX_TILT = 88,              // 790 units is max tilt assignment
+    MIN_TILT = -30,             // -267 units is min tilt assignment
+    MAX_PAN_SLEW = 90,          // 800 positions per sec (PPS)
+    MIN_PAN_SLEW = 1,           // 8 positions per sec (PPS)
+    MAX_TILT_SLEW = 69,         // 662 positions per sec (PPS)
+    MIN_TILT_SLEW = 1,          // 8 positions per sec (PPS)
     MAX_ZOOM_OPTIC = 1960,
     MIN_ZOOM = 0
   };
 
   // the various error states that the camera can return
-  enum Error {
+  enum Error
+  {
     CAM_ERROR_NONE = 0x30, ///<No error
     CAM_ERROR_BUSY = 0x31, ///<Camera busy, will not execute the command
     CAM_ERROR_PARAM = 0x35, ///<Illegal parameters to function call
@@ -123,26 +128,27 @@ class P2OSPtz
   };
 
   // Types for turning on and off the camera
-  enum Power {
+  enum Power
+  {
     POWER_OFF = 0,
     POWER_ON = 1
   };
 
- public:
+public:
   // Constructor
-  P2OSPtz (P2OSNode* p2os, bool bidirectional_com = false);
+  P2OSPtz(P2OSNode * p2os, bool bidirectional_com = false);
 
   // Core Functions
   int setup();
   void shutdown();
-  void callback(const p2os_msgs::PTZStateConstPtr &msg);
+  void callback(const p2os_msgs::PTZStateConstPtr & msg);
 
   // Communication Functions
-  int sendCommand(unsigned char *str, int len);
-  int sendRequest(unsigned char *str, int len, unsigned char* reply);
+  int sendCommand(unsigned char * str, int len);
+  int sendRequest(unsigned char * str, int len, unsigned char * reply);
   int receiveCommandAnswer(int asize);
-  int receiveRequestAnswer(unsigned char *data, int s1, int s2);
-  void getPtzPacket(int s1, int s2=0);
+  int receiveRequestAnswer(unsigned char * data, int s1, int s2);
+  void getPtzPacket(int s1, int s2 = 0);
 
   // Device Command Functions
   int setPower(Power on);
@@ -150,23 +156,26 @@ class P2OSPtz
   int sendInit();
 
   int getMaxZoom(int * max_zoom);
-  int getAbsZoom(int* zoom);
+  int getAbsZoom(int * zoom);
   int sendAbsZoom(int zoom);
 
   int setDefaultTiltRange();
-  int getAbsPanTilt(int* pan, int* tilt);
+  int getAbsPanTilt(int * pan, int * tilt);
   int sendAbsPanTilt(int pan, int tilt);
 
   // Simple getters and setters
-  bool isOn() const { return is_on_; }
-  p2os_msgs::PTZState getCurrentState() { return current_state_; }
+  bool isOn() const {return is_on_;}
+  p2os_msgs::PTZState getCurrentState() {return current_state_;}
 
   // Class members
- protected:
-  P2OSNode* p2os_;
- public:
+
+protected:
+  P2OSNode * p2os_;
+
+public:
   circbuf cb_;
- protected:
+
+protected:
   int max_zoom_;
   int pan_, tilt_, zoom_;
   bool is_on_;

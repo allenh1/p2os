@@ -87,7 +87,8 @@ void initialize_robot_params(void);
 #define SYNC1 1
 #define SYNC2 2
 
-enum P2OSCommand {
+enum P2OSCommand
+{
   PULSE = 0,
   OPEN = 1,
   CLOSE = 2,
@@ -129,13 +130,13 @@ enum P2OSCommand {
   TCM2 = 45, ///< TCM2 module commands, see tcm2 manual for details
   JOYDRIVE = 47,
   MOVINGBLINK = 49, ///< int, 1 to blink lamp quickly before moving, 0 not to
-                    ///(for patrolbot)
+  ///(for patrolbot)
   HOSTBAUD = 50, ///< int, set baud rate for host port - 0=9600, 1=19200,
-                 ///2=38400, 3=57600, 4=115200
+  ///2=38400, 3=57600, 4=115200
   AUX1BAUD = 51, ///< int, set baud rate for Aux1 - 0=9600, 1=19200, 2=38400,
-                 ///3=57600, 4=115200
+  ///3=57600, 4=115200
   AUX2BAUD = 52, ///< int, set baud rate for Aux2 - 0=9600, 1=19200, 2=38400,
-                 ///3=57600, 4=115200
+  ///3=57600, 4=115200
   ESTOP = 55, ///< none, emergency stop, overrides decel
   ESTALL = 56, // ?
   GYRO = 58,         // Added in AROS 1.8
@@ -168,7 +169,7 @@ enum P2OSCommand {
   SOUND = 90,
   PLAYLIST = 91,
   SOUNDTOG = 92, ///< int, AmigoBot (old H8 model) specific, enable(1) or
-                 /// diable(0) sound
+  /// diable(0) sound
   // Power commands
   POWER_PC = 95,
   POWER_LRF = 96,
@@ -184,7 +185,7 @@ enum P2OSCommand {
   // For SEEKUR or later lateral-capable robots
   LATVEL = 110, ///< int, sets the lateral velocity (mm)
   LATACCEL = 113, ///< int, sets the lateral acceleration (+, mm/sec2) or
-                  /// lateral deceleration (-, mm/sec2)
+  /// lateral deceleration (-, mm/sec2)
   SETLATV = 0, ///< int, someday will set the vel
 };
 
