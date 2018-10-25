@@ -25,12 +25,12 @@ include_directories(include
 
 ## Declare a cpp executable
 add_executable(p2os_driver
-  src/p2osnode.cc
-  src/p2os.cc
-  src/kinecalc.cc
-  src/packet.cc
-  src/robot_params.cc
-  src/sip.cc
+  src/p2osnode.cpp
+  src/p2os.cpp
+  src/kinecalc.cpp
+  src/packet.cpp
+  src/robot_params.cpp
+  src/sip.cpp
   src/p2os_ptz.cpp
 )
 
