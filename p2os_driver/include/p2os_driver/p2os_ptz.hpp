@@ -34,7 +34,7 @@ class P2OSNode;
 class circbuf
 {
 public:
-  circbuf(int size = 512);
+  explicit circbuf(int size = 512);
 
   void putOnBuf(unsigned char c);
   int  getFromBuf();
@@ -136,7 +136,7 @@ protected:
 
 public:
   // Constructor
-  P2OSPtz(P2OSNode * p2os, bool bidirectional_com = false);
+  explicit P2OSPtz(P2OSNode * p2os, bool bidirectional_com = false);
 
   // Core Functions
   int setup();

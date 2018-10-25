@@ -21,9 +21,11 @@
  */
 #ifndef P2OS_DRIVER__SIP_HPP_
 #define P2OS_DRIVER__SIP_HPP_
-#include <limits.h>
-#include <stdint.h>
 #include <p2os_driver/p2os.hpp>
+
+#include <climits>
+#include <cstdint>
+#include <string>
 
 typedef struct ArmJoint
 {
@@ -53,7 +55,7 @@ enum PlayerActArrayStates
 class SIP
 {
 private:
-  int PositionChange(unsigned short, unsigned short);
+  int PositionChange(uint16_t, uint16_t);
   int param_idx;   // index of our robot's data in the parameter table
 
 public:
@@ -61,10 +63,10 @@ public:
   bool lwstall, rwstall;
   unsigned char motors_enabled, sonar_flag;
   unsigned char status, battery, sonarreadings, analog, digin, digout;
-  unsigned short ptu, compass, timer, rawxpos;
-  unsigned short rawypos, frontbumpers, rearbumpers;
-  short angle, lvel, rvel, control;
-  unsigned short * sonars;
+  uint16_t ptu, compass, timer, rawxpos;
+  uint16_t rawypos, frontbumpers, rearbumpers;
+  int16_t angle, lvel, rvel, control;
+  uint16_t * sonars;
   int xpos, ypos;
   int x_offset, y_offset, angle_offset;
   std::string odom_frame_id;
@@ -72,9 +74,9 @@ public:
 
   // these values are returned in a CMUcam serial string extended SIP
   // (in host byte-order)
-  unsigned short blobmx, blobmy;        // Centroid
-  unsigned short blobx1, blobx2, bloby1, bloby2;        // Bounding box
-  unsigned short blobarea, blobconf;    // Area and confidence
+  uint16_t blobmx, blobmy;  // Centroid
+  uint16_t blobx1, blobx2, bloby1, bloby2;  // Bounding box
+  uint16_t blobarea, blobconf;  // Area and confidence
   unsigned int blobcolor;
 
   // This value is filled by ParseGyro()
@@ -94,8 +96,8 @@ public:
   // and down
   double lastLiftPos;
 
-  //Timestamping SIP packets
-  //double timeStandardSIP, timeGyro, timeSERAUX, timeArm;
+  // Timestamping SIP packets
+  // double timeStandardSIP, timeGyro, timeSERAUX, timeArm;
 
   /* returns 0 if Parsed correctly otherwise 1 */
   void ParseStandard(unsigned char * buffer);
@@ -108,11 +110,11 @@ public:
   void PrintArm();
   void PrintArmInfo();
   void FillStandard(ros_p2os_data_t * data);
-  //void FillSERAUX(player_p2os_data_t* data);
-  //void FillGyro(player_p2os_data_t* data);
-  //void FillArm(player_p2os_data_t* data);
+  // void FillSERAUX(player_p2os_data_t* data);
+  // void FillGyro(player_p2os_data_t* data);
+  // void FillArm(player_p2os_data_t* data);
 
-  SIP(int idx)
+  explicit SIP(int idx)
   : param_idx(idx), sonarreadings(0), sonars(NULL),
     xpos(0), ypos(0), x_offset(0), y_offset(0), angle_offset(0),
     blobmx(0), blobmy(0), blobx1(0), blobx2(0), bloby1(0), bloby2(0),
@@ -129,7 +131,7 @@ public:
     }
   }
 
-  ~SIP(void)
+  ~SIP()
   {
     delete[] sonars;
   }

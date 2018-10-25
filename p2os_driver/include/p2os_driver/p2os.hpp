@@ -23,11 +23,6 @@
 #define P2OS_DRIVER__P2OS_HPP_
 #include <pthread.h>
 #include <sys/time.h>
-#include <iostream>
-#include <string.h>
-
-#include <p2os_driver/packet.hpp>
-#include <p2os_driver/robot_params.hpp>
 
 #include <ros/ros.h>
 #include <nav_msgs/Odometry.h>
@@ -42,6 +37,13 @@
 
 #include <diagnostic_updater/publisher.h>
 #include <diagnostic_updater/diagnostic_updater.h>
+
+#include <p2os_driver/packet.hpp>
+#include <p2os_driver/robot_params.hpp>
+
+#include <iostream>
+#include <cstring>
+#include <string>
 
 /*! \brief Container struct.
  *
@@ -77,8 +79,6 @@ typedef struct ros_p2os_data
 class SIP;
 
 // Forward declaration of the KineCalc_Base class declared in kinecalc_base.h
-//class KineCalc;
-
 
 class P2OSNode
 {
@@ -89,7 +89,7 @@ class P2OSNode
    */
 
 public:
-  P2OSNode(ros::NodeHandle n);
+  explicit P2OSNode(ros::NodeHandle n);
   virtual ~P2OSNode();
 
 public:
@@ -115,7 +115,7 @@ public:
   inline double SecsPerTicktoRadsPerSec(int joint, double secs);
 
   void SendPulse(void);
-  //void spin();
+
   void check_and_set_vel();
   void cmdvel_cb(const geometry_msgs::TwistConstPtr &);
 
@@ -174,13 +174,13 @@ protected:
   //! Maximum turn speed in radians per second.
   int motor_max_turnspeed;
   //! Maximum translational acceleration in Meters per second per second.
-  short motor_max_trans_accel;
+  int16_t motor_max_trans_accel;
   //! Minimum translational acceleration in Meters per second per second.
-  short motor_max_trans_decel;
+  int16_t motor_max_trans_decel;
   //! Maximum rotational acceleration in radians per second per second.
-  short motor_max_rot_accel;
+  int16_t motor_max_rot_accel;
   //! Minimum rotational acceleration in Meters per second per second.
-  short motor_max_rot_decel;
+  int16_t motor_max_rot_decel;
   //! Pulse time
   double pulse;
   double desired_freq;

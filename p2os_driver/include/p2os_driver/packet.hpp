@@ -21,15 +21,19 @@
  */
 #ifndef P2OS_DRIVER__PACKET_HPP_
 #define P2OS_DRIVER__PACKET_HPP_
-#include <cstring>
 #include <ros/ros.h>
 
-#define PACKET_LEN 256
+#include <cstring>
+
+namespace
+{
+constexpr size_t packet_len = 256;
+}
 
 class P2OSPacket
 {
 public:
-  unsigned char packet[PACKET_LEN];
+  unsigned char packet[packet_len];
   unsigned char size;
   ros::Time timestamp;
 
