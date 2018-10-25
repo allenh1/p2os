@@ -1,10 +1,10 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2010
- *     Tucker Hermans, David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2004, 2005  ActivMedia Robotics LLC
+ *  Copyright (C) 2006, 2007, 2008, 2009  MobileRobots Inc.
+ *  Copyright (C) 2010  Tucker Hermans, David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *     Richard Vaughan, & Andrew Howard
- * Copyright (C) 2004, 2005 ActivMedia Robotics LLC
- * Copyright (C) 2006, 2007, 2008, 2009 MobileRobots Inc.
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,8 +21,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-#ifndef _P2OS_PTZ_H
-#define _P2OS_PTZ_H
+#ifndef P2OS_DRIVER__P2OS_PTZ_HPP_
+#define P2OS_DRIVER__P2OS_PTZ_HPP_
 
 #include <p2os_msgs/PTZState.h>
 #include <p2os_driver/packet.hpp>
@@ -58,33 +58,33 @@ class P2OSPtz
 public:
   enum Command
   {
-    DELIM = 0x00, ///<Delimeter character
-    DEVICEID = 0x30, ///<Default device ID
-    PANSLEW = 0x50, ///<Sets the pan slew
-    TILTSLEW = 0x51, ///<Sets the tilt slew
-    STOP = 0x53, ///<Stops current pan/tilt motion
-    INIT = 0x58, ///<Initializes the camera
-    SLEWREQ = 0x59, ///<Request pan/tilt min/max slew
-    ANGLEREQ = 0x5c, ///<Request pan/tilt min/max angle
-    PANTILT = 0x62, ///<Pan/tilt command
-    SETRANGE = 0x64, ///<Pan/tilt min/max range assignment
-    PANTILTREQ = 0x63, ///<Request pan/tilt position
-    INFRARED = 0x76, ///<Controls operation of IR lighting
-    PRODUCTNAME = 0x87, ///<Requests the product name
-    LEDCONTROL = 0x8E, ///<Controls LED status
-    CONTROL = 0x90, ///<Puts camera in Control mode
-    POWER = 0xA0, ///<Turns on/off power
-    AUTOFOCUS = 0xA1, ///<Controls auto-focusing functions
-    ZOOMSTOP = 0xA2, ///<Stops zoom motion
-    GAIN = 0xA5, ///<Sets gain adjustment on camera
-    FOCUS = 0xB0, ///<Manual focus adjustment
-    ZOOM = 0xB3, ///<Zooms camera lens
-    ZOOMREQ = 0xB4, ///<Requests max zoom position
-    IRCUTFILTER = 0xB5, ///<Controls the IR cut filter
-    DIGITALZOOM = 0xB7, ///<Controls the digital zoom amount
-    FOOTER = 0xEF, ///<Packet Footer
-    RESPONSE = 0xFE, ///<Packet header for response
-    HEADER = 0xFF ///<Packet Header
+    DELIM = 0x00,  // Delimeter character
+    DEVICEID = 0x30,  // Default device ID
+    PANSLEW = 0x50,  // Sets the pan slew
+    TILTSLEW = 0x51,  // Sets the tilt slew
+    STOP = 0x53,  // Stops current pan/tilt motion
+    INIT = 0x58,  // Initializes the camera
+    SLEWREQ = 0x59,  // Request pan/tilt min/max slew
+    ANGLEREQ = 0x5c,  // Request pan/tilt min/max angle
+    PANTILT = 0x62,  // Pan/tilt command
+    SETRANGE = 0x64,  // Pan/tilt min/max range assignment
+    PANTILTREQ = 0x63,  // Request pan/tilt position
+    INFRARED = 0x76,  // Controls operation of IR lighting
+    PRODUCTNAME = 0x87,  // Requests the product name
+    LEDCONTROL = 0x8E,  // Controls LED status
+    CONTROL = 0x90,  // Puts camera in Control mode
+    POWER = 0xA0,  // Turns on/off power
+    AUTOFOCUS = 0xA1,  // Controls auto-focusing functions
+    ZOOMSTOP = 0xA2,  // Stops zoom motion
+    GAIN = 0xA5,  // Sets gain adjustment on camera
+    FOCUS = 0xB0,  // Manual focus adjustment
+    ZOOM = 0xB3,  // Zooms camera lens
+    ZOOMREQ = 0xB4,  // Requests max zoom position
+    IRCUTFILTER = 0xB5,  // Controls the IR cut filter
+    DIGITALZOOM = 0xB7,  // Controls the digital zoom amount
+    FOOTER = 0xEF,  // Packet Footer
+    RESPONSE = 0xFE,  // Packet header for response
+    HEADER = 0xFF  // Packet Header
   };
 
   // the states for communication
@@ -120,11 +120,11 @@ protected:
   // the various error states that the camera can return
   enum Error
   {
-    CAM_ERROR_NONE = 0x30, ///<No error
-    CAM_ERROR_BUSY = 0x31, ///<Camera busy, will not execute the command
-    CAM_ERROR_PARAM = 0x35, ///<Illegal parameters to function call
-    CAM_ERROR_MODE = 0x39,  ///<Not in host control mode
-    CAM_ERROR_UNKNOWN = 0xFF ///<Unknown error condition.  Should never happen
+    CAM_ERROR_NONE = 0x30,  // No error
+    CAM_ERROR_BUSY = 0x31,  // Camera busy, will not execute the command
+    CAM_ERROR_PARAM = 0x35,  // Illegal parameters to function call
+    CAM_ERROR_MODE = 0x39,  // Not in host control mode
+    CAM_ERROR_UNKNOWN = 0xFF  // Unknown error condition.  Should never happen
   };
 
   // Types for turning on and off the camera
@@ -194,4 +194,4 @@ protected:
   static const int ZOOM_THRESH;
 };
 
-#endif
+#endif  //  P2OS_DRIVER__P2OS_PTZ_HPP_

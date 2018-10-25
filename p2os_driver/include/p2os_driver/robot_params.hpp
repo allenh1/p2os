@@ -1,9 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,7 +19,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-
+#ifndef P2OS_DRIVER__ROBOT_PARAMS_HPP_
+#define P2OS_DRIVER__ROBOT_PARAMS_HPP_
 /*
  * robot_params.hpp
  *
@@ -57,9 +57,6 @@
  *    psos1x.p
  *    p3dx-sh-lms1xx.p
 */
-
-#ifndef _ROBOT_PARAMS_H
-#define _ROBOT_PARAMS_H
 #include <string>
 
 void initialize_robot_params(void);
@@ -300,8 +297,6 @@ typedef struct
   //bumper_def_t bumper_geom[32];
 } RobotParams_t;
 
-
 extern RobotParams_t PlayerRobotParams[];
 
-
-#endif
+#endif  // P2OS_DRIVER__ROBOT_PARAMS_HPP_

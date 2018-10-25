@@ -1,9 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,10 +19,8 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-
-#ifndef _P2OSDEVICE_H
-#define _P2OSDEVICE_H
-
+#ifndef P2OS_DRIVER__P2OS_HPP_
+#define P2OS_DRIVER__P2OS_HPP_
 #include <pthread.h>
 #include <sys/time.h>
 #include <iostream>
@@ -205,4 +202,4 @@ public:
   ros_p2os_data_t p2os_data;
 };
 
-#endif
+#endif  // P2OS_DRIVER__P2OS_HPP_

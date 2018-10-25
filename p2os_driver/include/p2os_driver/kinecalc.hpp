@@ -3,7 +3,8 @@
  *  Copyright (C) 2009
  *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018
+ *     Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,9 +21,9 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-
-
-#include <stdio.h>
+#ifndef P2OS_DRIVER__KINECALC_HPP_
+#define P2OS_DRIVER__KINECALC_HPP_
+#include <cstdio>
 
 // Basic vector
 typedef struct
@@ -118,3 +119,4 @@ protected:
   // specify them in the config file.
   double link1, link2, link3, link4, link5;
 };
+#endif  // P2OS_DRIVER__KINECALC_HPP_
