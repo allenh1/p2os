@@ -31,7 +31,6 @@
 #include <p2os_driver/sip.hpp>
 #include <tf/tf.h>
 #include <tf/transform_datatypes.h>
-#include <boost/assign/list_of.hpp>
 #include <sstream>
 
 void SIP::FillStandard(ros_p2os_data_t * data)
