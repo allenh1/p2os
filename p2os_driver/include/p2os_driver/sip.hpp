@@ -66,7 +66,7 @@ public:
   uint16_t ptu, compass, timer, rawxpos;
   uint16_t rawypos, frontbumpers, rearbumpers;
   int16_t angle, lvel, rvel, control;
-  uint16_t * sonars;
+  std::unique_ptr<double[]> sonars;
   int xpos, ypos;
   int x_offset, y_offset, angle_offset;
   std::string odom_frame_id;
@@ -115,12 +115,12 @@ public:
   // void FillArm(player_p2os_data_t* data);
 
   explicit SIP(int idx)
-  : param_idx(idx), sonarreadings(0), sonars(NULL),
+  : param_idx(idx), sonarreadings(0), sonars(nullptr),
     xpos(0), ypos(0), x_offset(0), y_offset(0), angle_offset(0),
     blobmx(0), blobmy(0), blobx1(0), blobx2(0), bloby1(0), bloby2(0),
     blobarea(0), blobconf(0), blobcolor(0),
-    armPowerOn(false), armConnected(false), armVersionString(NULL),
-    armNumJoints(0), armJoints(NULL),
+    armPowerOn(false), armConnected(false), armVersionString(nullptr),
+    armNumJoints(0), armJoints(nullptr),
     lastLiftPos(0.0f)
   {
     for (int i = 0; i < 6; ++i) {
@@ -131,10 +131,7 @@ public:
     }
   }
 
-  ~SIP()
-  {
-    delete[] sonars;
-  }
+  ~SIP(){}
 };
 
 #endif  // P2OS_DRIVER__SIP_HPP_

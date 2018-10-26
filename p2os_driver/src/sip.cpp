@@ -241,8 +241,6 @@ int SIP::PositionChange(uint16_t from, uint16_t to)
 
 void SIP::Print()
 {
-  int i;
-
   ROS_DEBUG("lwstall:%d rwstall:%d\n", lwstall, rwstall);
 
   std::stringstream front_bumper_info;
@@ -260,19 +258,19 @@ void SIP::Print()
 
   ROS_DEBUG("status: 0x%x analog: %d param_id: %d ", status, analog, param_idx);
   std::stringstream status_info;
-  for (i = 0; i < 11; i++) {
+  for (int i = 0; i < 11; i++) {
     status_info << " " <<
       static_cast<int>((status >> (7 - i) ) & 0x01);
   }
   ROS_DEBUG("status:%s", status_info.str().c_str());
   std::stringstream digin_info;
-  for (i = 0; i < 8; i++) {
+  for (int i = 0; i < 8; i++) {
     digin_info << " " <<
       static_cast<int>((digin >> (7 - i) ) & 0x01);
   }
   ROS_DEBUG("digin:%s", digin_info.str().c_str());
   std::stringstream digout_info;
-  for (i = 0; i < 8; i++) {
+  for (int i = 0; i < 8; i++) {
     digout_info << " " <<
       static_cast<int>((digout >> (7 - i) ) & 0x01);
   }
@@ -291,13 +289,14 @@ void SIP::Print()
 void SIP::PrintSonars()
 {
   if (sonarreadings <= 0) {
+    ROS_WARN("sonarreadings <= 0");
     return;
   }
   std::stringstream sonar_info;
   for (int i = 0; i < sonarreadings; i++) {
-    sonar_info << " " << static_cast<int>(sonars[i]);
+    sonar_info << " " << sonars[i];
   }
-  ROS_DEBUG("Sonars: %s", sonar_info.str().c_str());
+  ROS_INFO("Sonars: %s", sonar_info.str().c_str());
 }
 
 void SIP::PrintArm()
@@ -425,23 +424,24 @@ void SIP::ParseStandard(unsigned char * buffer)
     unsigned char maxSonars = sonarreadings;
     for (unsigned char i = 0; i < numSonars; i++) {
       unsigned char sonarIndex = buffer[cnt + i * (sizeof(unsigned char) + sizeof(uint16_t))];
-      if ((sonarIndex + 1) > maxSonars) {maxSonars = sonarIndex + 1;}
+      if ((sonarIndex + 1) > maxSonars) {
+        maxSonars = sonarIndex + 1;
+      }
     }
 
     // if necessary make more space in the array and preserve existing readings
     if (maxSonars > sonarreadings) {
-      uint16_t * newSonars = new uint16_t[maxSonars];
+      auto newSonars = std::make_unique<double[]>(maxSonars);
       for (unsigned char i = 0; i < sonarreadings; i++) {
         newSonars[i] = sonars[i];
       }
-      if (sonars != NULL) {delete[] sonars;}
-      sonars = newSonars;
+      sonars = std::move(newSonars);
       sonarreadings = maxSonars;
     }
 
     // update the sonar readings array with the new readings
     for (unsigned char i = 0; i < numSonars; i++) {
-      sonars[buffer[cnt]] = static_cast<uint16_t>(
+      sonars[buffer[cnt]] = static_cast<double>(
         rint((buffer[cnt + 1] | (buffer[cnt + 2] << 8)) *
         PlayerRobotParams[param_idx].RangeConvFactor));
       cnt += sizeof(unsigned char) + sizeof(uint16_t);
@@ -460,8 +460,8 @@ void SIP::ParseStandard(unsigned char * buffer)
   digout = buffer[cnt];
   cnt += sizeof(unsigned char);
   // for debugging:
-  Print();
-  // PrintSonars();
+  // Print();
+  PrintSonars();
 }
 
 /** Parse a SERAUX SIP packet.  For a CMUcam, this will have blob
