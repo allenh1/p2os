@@ -12,8 +12,7 @@ before_install:
 install:
   - cd ../ && git clone https://github.com/ros-infrastructure/superflore
   - cd superflore && python ./setup.py install
-  - cd ../p2os
+  - cd ../p2os/tests
 # command to run tests
 script:
   - python ./test.py
-

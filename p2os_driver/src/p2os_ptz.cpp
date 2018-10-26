@@ -237,6 +237,7 @@ int P2OSPtz::sendCommand(unsigned char * str, int len)
 
 int P2OSPtz::sendRequest(unsigned char * str, int len, unsigned char * reply)
 {
+  static_cast<void>(reply);  // TODO(hallen): why isn't this used?
   P2OSPacket ptz_packet;
   P2OSPacket request_pkt;
   unsigned char request[4];
@@ -469,7 +470,7 @@ void P2OSPtz::getPtzPacket(int s1, int s2)
   // Reset our receiving buffer.
   cb_.reset();
 
-  //Request the request-size back
+  // Request the request-size back
   request_pkt.Build(request, 4);
   p2os_->SendReceive(&request_pkt, false);
 
@@ -622,7 +623,7 @@ int P2OSPtz::getMaxZoom(int * maxzoom)
   // convert the 2 bytes into a number
   u_zoom = 0;
   for (i = 0; i < 4; i++) {
-    u_zoom += buf[i] * (unsigned int) pow(16.0, (double)(3 - i));
+    u_zoom += buf[i] * static_cast<unsigned int>(pow(16.0, static_cast<double>(3 - i)));
   }
   *maxzoom = u_zoom;
 
@@ -673,7 +674,7 @@ int P2OSPtz::getAbsZoom(int * zoom)
   // convert the 2 bytes into a number
   u_zoom = 0;
   for (i = 0; i < 4; i++) {
-    u_zoom += buf[i] * (unsigned int) pow(16.0, (double)(3 - i));
+    u_zoom += buf[i] * static_cast<unsigned int>(pow(16.0, static_cast<double>(3 - i)));
   }
   *zoom = u_zoom;
   return 0;
@@ -697,7 +698,7 @@ int P2OSPtz::sendAbsZoom(int zoom)
   command[3] = DELIM;
   command[4] = ZOOM;
 
-  sprintf((char *)buf, "%4X", zoom);
+  snprintf(reinterpret_cast<char *>(buf), sizeof(buf), "%4X", zoom);
 
   for (i = 0; i < 3; i++) {
     if (buf[i] == ' ') {
@@ -723,13 +724,13 @@ int P2OSPtz::sendAbsZoom(int zoom)
     usleep(SLEEP_TIME_USEC);
     return 0;
   }
-  //return (receiveCommandAnswer(COMMAND_RESPONSE_BYTES));
+  // return (receiveCommandAnswer(COMMAND_RESPONSE_BYTES));
 }
 
 int P2OSPtz::setDefaultTiltRange()
 {
   unsigned char command[MAX_COMMAND_LENGTH];
-  unsigned char buf[5]; //4 values and string terminator
+  unsigned char buf[5];  // 4 values and string terminator
   int maxtilt, mintilt;
 
   command[0] = HEADER;
@@ -739,14 +740,14 @@ int P2OSPtz::setDefaultTiltRange()
   command[4] = SETRANGE;
   command[5] = DEVICEID + 1;
 
-  mintilt = (int)(floor(MIN_TILT / .1125) + 0x8000);
-  sprintf((char *)buf, "%X", mintilt);
+  mintilt = static_cast<int>(floor(MIN_TILT / .1125) + 0x8000);
+  snprintf(reinterpret_cast<char *>(buf), sizeof(buf), "%X", mintilt);
   command[6] = buf[0];
   command[7] = buf[1];
   command[8] = buf[2];
   command[9] = buf[3];
-  maxtilt = (int)(floor(MAX_TILT / .1125) + 0x8000);
-  sprintf((char *)buf, "%X", maxtilt);
+  maxtilt = static_cast<int>(floor(MAX_TILT / .1125) + 0x8000);
+  snprintf(reinterpret_cast<char *>(buf), sizeof(buf), "%X", maxtilt);
 
   command[10] = buf[0];
   command[11] = buf[1];
@@ -765,7 +766,6 @@ int P2OSPtz::setDefaultTiltRange()
   }
 
   // return(receiveCommandAnswer(COMMAND_RESPONSE_BYTES));
-
 }
 
 int P2OSPtz::getAbsPanTilt(int * pan, int * tilt)
@@ -815,7 +815,7 @@ int P2OSPtz::getAbsPanTilt(int * pan, int * tilt)
   u_val = buf[0] * 0x1000 + buf[1] * 0x100 + buf[2] * 0x10 + buf[3];
 
   // convert the number to a value that's meaningful, based on camera specs
-  val = (int)(((int)u_val - (int)0x8000) * 0.1125);
+  val = static_cast<int>((static_cast<int>(u_val) - 0x8000) * 0.1125);
 
   // now set myPan to the response received for where the camera thinks it is
   *pan = val;
@@ -831,7 +831,7 @@ int P2OSPtz::getAbsPanTilt(int * pan, int * tilt)
     buf[i] = byte;
   }
   u_val = buf[0] * 0x1000 + buf[1] * 0x100 + buf[2] * 0x10 + buf[3];
-  val = (int)(((int)u_val - (int)0x8000) * 0.1125);
+  val = static_cast<int>((static_cast<int>(u_val) - 0x8000) * 0.1125);
   *tilt = val;
 
   return 0;
@@ -846,22 +846,22 @@ int P2OSPtz::sendAbsPanTilt(int pan, int tilt)
 
   ppan = pan; ttilt = tilt;
   if (pan < MIN_PAN) {
-    ppan = (int)MIN_PAN;
+    ppan = static_cast<int>(MIN_PAN);
   } else if (pan > MAX_PAN) {
-    ppan = (int)MAX_PAN;
+    ppan = static_cast<int>(MAX_PAN);
   }
 
   if (tilt > MAX_TILT) {
-    ttilt = (int)MAX_TILT;
+    ttilt = static_cast<int>(MAX_TILT);
   } else if (tilt < MIN_TILT) {
-    ttilt = (int)MIN_TILT;
+    ttilt = static_cast<int>(MIN_TILT);
   }
-  //puts("Camera pan angle thresholded");
+  // puts("Camera pan angle thresholded");
 
-  //puts("Camera tilt angle thresholded");
+  // puts("Camera tilt angle thresholded");
 
-  convpan = (int)floor(ppan / .1125) + 0x8000;
-  convtilt = (int)floor(ttilt / .1125) + 0x8000;
+  convpan = static_cast<int>(floor(ppan / .1125)) + 0x8000;
+  convtilt = static_cast<int>(floor(ttilt / .1125)) + 0x8000;
   //   fprintf(stdout, "ppan: %d ttilt: %d conpan: %d contilt: %d\n",
   //      ppan,ttilt,convpan,convtilt);
   command[0] = HEADER;
@@ -871,14 +871,14 @@ int P2OSPtz::sendAbsPanTilt(int pan, int tilt)
   command[4] = PANTILT;
   // pan position
 
-  snprintf((char *)buf, sizeof(buf), "%X", convpan);
+  snprintf(reinterpret_cast<char *>(buf), sizeof(buf), "%X", convpan);
 
   command[5] = buf[0];
   command[6] = buf[1];
   command[7] = buf[2];
   command[8] = buf[3];
   // tilt position
-  snprintf((char *)buf, sizeof(buf), "%X", convtilt);
+  snprintf(reinterpret_cast<char *>(buf), sizeof(buf), "%X", convtilt);
   command[9] = buf[0];
   command[10] = buf[1];
   command[11] = buf[2];
@@ -898,7 +898,7 @@ int P2OSPtz::sendAbsPanTilt(int pan, int tilt)
     return 0;
   }
 
-  //return(receiveCommandAnswer(COMMAND_RESPONSE_BYTES));
+  // return(receiveCommandAnswer(COMMAND_RESPONSE_BYTES));
 }
 
 //
@@ -947,7 +947,7 @@ int circbuf::getFromBuf()
   if (start != end) {
     unsigned char ret = buf[start];
     start = (start + 1) % mysize;
-    return (int)ret;
+    return static_cast<int>(ret);
   } else {
     return -1;
   }

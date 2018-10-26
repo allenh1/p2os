@@ -1,8 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -18,7 +18,6 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
  */
 
 
@@ -32,8 +31,8 @@
 #include <p2os_driver/sip.hpp>
 #include <tf/tf.h>
 #include <tf/transform_datatypes.h>
-#include <sstream>
 #include <boost/assign/list_of.hpp>
+#include <sstream>
 
 void SIP::FillStandard(ros_p2os_data_t * data)
 {
@@ -73,21 +72,21 @@ void SIP::FillStandard(ros_p2os_data_t * data)
   data->position.twist.twist.linear.x = ((lvel + rvel) / 2) / 1e3;
   data->position.twist.twist.linear.y = 0.0;
   data->position.twist.twist.angular.z =
-    ((double)(rvel - lvel) / (2.0 / PlayerRobotParams[param_idx].DiffConvFactor));
+    static_cast<double>((rvel - lvel) / (2.0 / PlayerRobotParams[param_idx].DiffConvFactor));
 
 
-  data->position.pose.covariance =
-    boost::assign::list_of(1e-3) (0)    (0)   (0)   (0)   (0)(0)    (1e-3) (0)   (0)   (0)   (0)(0)    (
-    0)    (1e6) (0)   (0)   (0)(0)    (0)    (0)   (1e6) (0)   (0)(0)    (0)    (0)   (0)   (1e6) (0)(
-    0)    (0)    (0)   (0)   (0)   (1e3);
+  data->position.pose.covariance = {
+    1e-3, 0, 0, 0, 0, 0, 0, 1e-3, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0,
+    1e6, 0, 0, 0, 0, 0, 0, 1e3
+  };
 
-  data->position.twist.covariance =
-    boost::assign::list_of(1e-3) (0)    (0)   (0)   (0)   (0)(0)    (1e-3) (0)   (0)   (0)   (0)(0)    (
-    0)    (1e6) (0)   (0)   (0)(0)    (0)    (0)   (1e6) (0)   (0)(0)    (0)    (0)   (0)   (1e6) (0)(
-    0)    (0)    (0)   (0)   (0)   (1e3);
+  data->position.twist.covariance = {
+    1e-3, 0, 0, 0, 0, 0, 0, 1e-3, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0, 1e6, 0, 0, 0, 0, 0, 0,
+    1e6, 0, 0, 0, 0, 0, 0, 1e3
+  };
 
 
-  //publish transform
+  // publish transform
   data->odom_trans.header = data->position.header;
   data->odom_trans.child_frame_id = data->position.child_frame_id;
   data->odom_trans.transform.translation.x = px;
@@ -102,7 +101,7 @@ void SIP::FillStandard(ros_p2os_data_t * data)
   // The below will tell us if the motors are currently moving or not, it does
   // not tell us whether they have been enabled
   // data->motors.state = (status & 0x01);
-  data->motors.state = (motors_enabled & 0x01);
+  data->motors.state = motors_enabled & 0x01;
   /*
   ///////////////////////////////////////////////////////////////
   // compass
@@ -115,7 +114,7 @@ void SIP::FillStandard(ros_p2os_data_t * data)
   data->sonar.ranges_count = static_cast<int>(sonarreadings);
   data->sonar.ranges.clear();
   for (int i = 0; i < data->sonar.ranges_count; i++) {
-    data->sonar.ranges.push_back(sonars[i] / 1e3);
+    data->sonar.ranges.emplace_back(sonars[i] / 1e3);
   }
 
   ///////////////////////////////////////////////////////////////
@@ -167,7 +166,7 @@ void SIP::FillStandard(ros_p2os_data_t * data)
     // must be at an intermediate carry position. Use last commanded position
     data->gripper.lift.state = PLAYER_ACTARRAY_ACTSTATE_IDLE;
     data->gripper.lift.position = lastLiftPos;
-  } else if (gripState & 0x40) { // Moving
+  } else if (gripState & 0x40) {  // Moving
     data->gripper.lift.state = PLAYER_ACTARRAY_ACTSTATE_MOVING;
     // There is no way to know where it is for sure, so use last commanded
     // position.
@@ -177,15 +176,15 @@ void SIP::FillStandard(ros_p2os_data_t * data)
     } else if (gripState & 0x20) {
       data->gripper.lift.dir = -1;
     }
-  } else if (gripState & 0x10) { // Up
+  } else if (gripState & 0x10) {  // Up
     data->gripper.lift.state = PLAYER_ACTARRAY_ACTSTATE_IDLE;
     data->gripper.lift.position = 1.0f;
     data->gripper.lift.dir = 0;
-  } else if (gripState & 0x20) { // Down
+  } else if (gripState & 0x20) {  // Down
     data->gripper.lift.state = PLAYER_ACTARRAY_ACTSTATE_IDLE;
     data->gripper.lift.position = 0.0f;
     data->gripper.lift.dir = 0;
-  } else { // Assume stalled
+  } else {  // Assume stalled
     data->gripper.lift.state = PLAYER_ACTARRAY_ACTSTATE_STALLED;
   }
   // Store the last lift position
@@ -213,12 +212,12 @@ void SIP::FillStandard(ros_p2os_data_t * data)
   ///////////////////////////////////////////////////////////////
   // digital I/O
   data->dio.count = 8;
-  data->dio.bits = (unsigned int)this->digin;
+  data->dio.bits = static_cast<unsigned int>(this->digin);
 
   ///////////////////////////////////////////////////////////////
   // analog I/O
-  //TODO: should do this smarter, based on which analog input is selected
-  data->aio.voltages_count = (unsigned char)1;
+  // TODO(allenh1): should do this smarter, based on which analog input is selected
+  data->aio.voltages_count = static_cast<unsigned char>(1);
   // if (!data->aio.voltages)
   //   data->aio.voltages = new float[1];
   // data->aio.voltages[0] = (this->analog / 255.0) * 5.0;
@@ -226,25 +225,19 @@ void SIP::FillStandard(ros_p2os_data_t * data)
   data->aio.voltages.push_back((this->analog / 255.0) * 5.0);
 }
 
-int SIP::PositionChange(unsigned short from, unsigned short to)
+int SIP::PositionChange(uint16_t from, uint16_t to)
 {
   int diff1, diff2;
 
-  /* find difference in two directions and pick shortest */
+  /* find difference in two directions and pick int16_test */
   if (to > from) {
     diff1 = to - from;
-    diff2 = -( from + 4096 - to );
+    diff2 = -(from + 4096 - to);
   } else {
     diff1 = to - from;
     diff2 = 4096 - from + to;
   }
-
-  if (abs(diff1) < abs(diff2) ) {
-    return diff1;
-  } else {
-    return diff2;
-  }
-
+  return abs(diff1) < abs(diff2) ? diff1 : diff2;
 }
 
 void SIP::Print()
@@ -333,18 +326,18 @@ void SIP::PrintArmInfo()
 void SIP::ParseStandard(unsigned char * buffer)
 {
   int cnt = 0, change;
-  unsigned short newxpos, newypos;
+  uint16_t newxpos, newypos;
 
   status = buffer[cnt];
   cnt += sizeof(unsigned char);
   /*
    * Remember P2OS uses little endian:
-   * for a 2 byte short (called integer on P2OS)
+   * for a 2 byte int16_t (called integer on P2OS)
    * byte0 is low byte, byte1 is high byte
    * The following code is host-machine endian independant
    * Also we must or (|) bytes together instead of casting to a
-   * short * since on ARM architectures short * must be even byte aligned!
-   * You can get away with this on a i386 since shorts * can be
+   * int16_t * since on ARM architectures int16_t * must be even byte aligned!
+   * You can get away with this on a i386 since int16_ts * can be
    * odd byte aligned. But on ARM, the last bit of the pointer will be ignored!
    * The or'ing will work on either arch.
    */
@@ -352,8 +345,8 @@ void SIP::ParseStandard(unsigned char * buffer)
     0xEFFF) % 4096;            /* 15 ls-bits */
 
   if (xpos != INT_MAX) {
-    change = (int) rint(PositionChange(rawxpos, newxpos) *
-        PlayerRobotParams[param_idx].DistConvFactor);
+    change = static_cast<int>(rint(PositionChange(rawxpos, newxpos) *
+      PlayerRobotParams[param_idx].DistConvFactor));
     if (abs(change) > 100) {
       ROS_DEBUG("invalid odometry change [%d]; odometry values are tainted", change);
     } else {
@@ -363,14 +356,14 @@ void SIP::ParseStandard(unsigned char * buffer)
     xpos = 0;
   }
   rawxpos = newxpos;
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
   newypos = ((buffer[cnt] | (buffer[cnt + 1] << 8)) &
     0xEFFF) % 4096;            /* 15 ls-bits */
 
   if (ypos != INT_MAX) {
-    change = (int) rint(PositionChange(rawypos, newypos) *
-        PlayerRobotParams[param_idx].DistConvFactor);
+    change = static_cast<int>(rint(PositionChange(rawypos, newypos) *
+      PlayerRobotParams[param_idx].DistConvFactor));
     if (abs(change) > 100) {
       ROS_DEBUG("invalid odometry change [%d]; odometry values are tainted", change);
     } else {
@@ -380,22 +373,22 @@ void SIP::ParseStandard(unsigned char * buffer)
     ypos = 0;
   }
   rawypos = newypos;
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
-  angle = (short)
-    rint(((short)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
+  angle = (int16_t)
+    rint(((int16_t)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
       PlayerRobotParams[param_idx].AngleConvFactor * 180.0 / M_PI);
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
-  lvel = (short)
-    rint(((short)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
+  lvel = (int16_t)
+    rint(((int16_t)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
       PlayerRobotParams[param_idx].VelConvFactor);
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
-  rvel = (short)
-    rint(((short)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
+  rvel = (int16_t)
+    rint(((int16_t)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
       PlayerRobotParams[param_idx].VelConvFactor);
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
   battery = buffer[cnt];
   cnt += sizeof(unsigned char);
@@ -409,17 +402,17 @@ void SIP::ParseStandard(unsigned char * buffer)
   frontbumpers = buffer[cnt] >> 1;
   cnt += sizeof(unsigned char);
 
-  control = (short)
-    rint(((short)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
+  control = (int16_t)
+    rint(((int16_t)(buffer[cnt] | (buffer[cnt + 1] << 8))) *
       PlayerRobotParams[param_idx].AngleConvFactor);
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
   ptu = (buffer[cnt] | (buffer[cnt + 1] << 8));
   motors_enabled = buffer[cnt];
   sonar_flag = buffer[cnt + 1];
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
-  //compass = buffer[cnt]*2;
+  // compass = buffer[cnt]*2;
   if (buffer[cnt] != 255 && buffer[cnt] != 0 && buffer[cnt] != 181) {
     compass = (buffer[cnt] - 1) * 2;
   }
@@ -429,16 +422,16 @@ void SIP::ParseStandard(unsigned char * buffer)
   cnt += sizeof(unsigned char);
 
   if (numSonars > 0) {
-    //find the largest sonar index supplied
+    // find the largest sonar index supplied
     unsigned char maxSonars = sonarreadings;
     for (unsigned char i = 0; i < numSonars; i++) {
-      unsigned char sonarIndex = buffer[cnt + i * (sizeof(unsigned char) + sizeof(unsigned short))];
+      unsigned char sonarIndex = buffer[cnt + i * (sizeof(unsigned char) + sizeof(uint16_t))];
       if ((sonarIndex + 1) > maxSonars) {maxSonars = sonarIndex + 1;}
     }
 
-    //if necessary make more space in the array and preserve existing readings
+    // if necessary make more space in the array and preserve existing readings
     if (maxSonars > sonarreadings) {
-      unsigned short * newSonars = new unsigned short[maxSonars];
+      uint16_t * newSonars = new uint16_t[maxSonars];
       for (unsigned char i = 0; i < sonarreadings; i++) {
         newSonars[i] = sonars[i];
       }
@@ -447,17 +440,17 @@ void SIP::ParseStandard(unsigned char * buffer)
       sonarreadings = maxSonars;
     }
 
-    //update the sonar readings array with the new readings
+    // update the sonar readings array with the new readings
     for (unsigned char i = 0; i < numSonars; i++) {
-      sonars[buffer[cnt]] = (unsigned short)
+      sonars[buffer[cnt]] = static_cast<uint16_t>(
         rint((buffer[cnt + 1] | (buffer[cnt + 2] << 8)) *
-          PlayerRobotParams[param_idx].RangeConvFactor);
-      cnt += sizeof(unsigned char) + sizeof(unsigned short);
+        PlayerRobotParams[param_idx].RangeConvFactor));
+      cnt += sizeof(unsigned char) + sizeof(uint16_t);
     }
   }
 
   timer = (buffer[cnt] | (buffer[cnt + 1] << 8));
-  cnt += sizeof(short);
+  cnt += sizeof(int16_t);
 
   analog = buffer[cnt];
   cnt += sizeof(unsigned char);
@@ -490,7 +483,7 @@ void SIP::ParseSERAUX(unsigned char * buffer)
     return;
   }
 
-  int len = (int)buffer[0] - 3;          // Get the string length
+  int len = static_cast<int>(buffer[0]) - 3;  // Get the string length
 
   /* First thing is to find the beginning of last full packet (if possible).
   ** If there are less than CMUCAM_MESSAGE_LEN*2-1 bytes (19), we're not
@@ -550,7 +543,7 @@ SIP::ParseGyro(unsigned char * buffer)
 {
   // Get the message length (account for the type byte and the 2-byte
   // checksum)
-  int len = (int)buffer[0] - 3;
+  int len = static_cast<int>(buffer[0] - 3);
 
   unsigned char type = buffer[1];
   if (type != GYROPAC) {
@@ -565,7 +558,7 @@ SIP::ParseGyro(unsigned char * buffer)
   }
 
   // get count
-  int count = (int)buffer[2];
+  int count = static_cast<int>(buffer[2]);
 
   // sanity check
   if ((len - 1) != (count * 3)) {
@@ -581,17 +574,15 @@ SIP::ParseGyro(unsigned char * buffer)
   // set, and ignore the temperatures.
   float ratesum = 0;
   int bufferpos = 3;
-  unsigned short rate;
-  unsigned char temp;
+  uint16_t rate;
   for (int i = 0; i < count; i++) {
-    rate = (unsigned short)(buffer[bufferpos++]);
+    rate = (uint16_t)(buffer[bufferpos++]);
     rate |= buffer[bufferpos++] << 8;
-    temp = bufferpos++;
 
     ratesum += rate;
   }
 
-  int32_t average_rate = (int32_t)rint(ratesum / (float)count);
+  int32_t average_rate = static_cast<int32_t>(rint(ratesum / static_cast<float>(count)));
 
   // store the result for sending
   gyro_rate = average_rate;
@@ -599,7 +590,7 @@ SIP::ParseGyro(unsigned char * buffer)
 
 void SIP::ParseArm(unsigned char * buffer)
 {
-  int length = (int) buffer[0] - 2;
+  int length = static_cast<int>(buffer[0]) - 2;
 
   if (buffer[1] != ARMPAC) {
     ROS_ERROR("Attempt to parse a non ARM packet as arm data.\n");
@@ -612,18 +603,8 @@ void SIP::ParseArm(unsigned char * buffer)
   }
 
   unsigned char status = buffer[2];
-  if (status & 0x01) {
-    armPowerOn = true;                          // Power is on
-  } else {
-    armPowerOn = false;                         // Power is off
-
-  }
-  if (status & 0x02) {
-    armConnected = true;                // Connection is established
-  } else {
-    armConnected = false;               // Connection is not established
-
-  }
+  armPowerOn = status & 0x01;
+  armConnected = status & 0x02;
   unsigned char motionStatus = buffer[3];
   if (motionStatus & 0x01) {
     armJointMoving[0] = true;
@@ -644,13 +625,13 @@ void SIP::ParseArm(unsigned char * buffer)
     armJointMoving[5] = true;
   }
 
-  memcpy(armJointPos, &buffer[4], 6);
-  memset(armJointPosRads, 0, 6 * sizeof(double));
+  ::memcpy(armJointPos, &buffer[4], 6);
+  ::memset(armJointPosRads, 0, 6 * sizeof(double));
 }
 
 void SIP::ParseArmInfo(unsigned char * buffer)
 {
-  int length = (int) buffer[0] - 2;
+  int length = static_cast<int>(buffer[0]) - 2;
   if (buffer[1] != ARMINFOPAC) {
     ROS_ERROR("Attempt to parse a non ARMINFO packet as arm info.\n");
     return;
@@ -666,12 +647,11 @@ void SIP::ParseArmInfo(unsigned char * buffer)
     free(armVersionString);
   }
   // strndup() isn't available everywhere (e.g., Darwin)
-  //armVersionString = strndup ((char*) &buffer[2], length);		// Can't be any bigger than length
-  armVersionString = (char *)calloc(length + 1, sizeof(char));
+  // armVersionString = strndup ((char*) &buffer[2], length);  // Can't be any bigger than length
+  armVersionString = reinterpret_cast<char *>(calloc(length + 1, sizeof(char)));
   assert(armVersionString);
-  strncpy(armVersionString, (char *)&buffer[2], length);
-  int dataOffset = strlen(armVersionString) + 3;                // +1 for packet size byte, +1 for packet ID, +1 for null byte
-
+  strncpy(armVersionString, reinterpret_cast<char *>(&buffer[2]), length);
+  int dataOffset = strlen(armVersionString) + 3;  // 1 for packet size byte, 1 ID, 1 for '\0'
   armNumJoints = buffer[dataOffset];
   if (armJoints) {
     delete[] armJoints;

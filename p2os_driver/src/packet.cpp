@@ -1,9 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2000
- *      Hunter Allen, David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2000  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -26,7 +25,7 @@
 #include <string.h>
 #include <p2os_driver/packet.hpp>
 #include <unistd.h>
-#include <stdlib.h> /* for exit() */
+#include <stdlib.h>
 #include <ros/ros.h>
 
 void P2OSPacket::Print()
@@ -54,15 +53,8 @@ void P2OSPacket::PrintHex()
 
 bool P2OSPacket::Check()
 {
-  short chksum;
-  chksum = CalcChkSum();
-
-  if ((chksum == packet[size - 2] << 8) | packet[size - 1]) {
-    return true;
-  }
-
-
-  return false;
+  const int16_t chksum = CalcChkSum();
+  return (chksum == (packet[size - 2] << 8)) | packet[size - 1];
 }
 
 int P2OSPacket::CalcChkSum()
@@ -71,15 +63,15 @@ int P2OSPacket::CalcChkSum()
   int c = 0;
   int n;
 
-  n = size - 5;
-
-  while (n > 1) {
+  for (n = size - 5; n > 1; ) {
     c += (*(buffer) << 8) | *(buffer + 1);
     c = c & 0xffff;
     n -= 2;
     buffer += 2;
   }
-  if (n > 0) {c = c ^ (int)*(buffer++);}
+  if (n > 0) {
+    c ^= static_cast<int>(*(buffer++));
+  }
 
   return c;
 }
@@ -89,15 +81,15 @@ int P2OSPacket::Receive(int fd)
   unsigned char prefix[3];
   int cnt;
 
-  memset(packet, 0, sizeof(packet));
+  ::memset(packet, 0, sizeof(packet));
 
   do {
-    memset(prefix, 0, sizeof(prefix));
+    ::memset(prefix, 0, sizeof(prefix));
 
     while (1) {
       cnt = 0;
       while (cnt != 1) {
-        if ( (cnt += read(fd, &prefix[2], 1)) < 0) {
+        if ((cnt += read(fd, &prefix[2], 1)) < 0) {
           ROS_ERROR(
             "Error reading packet.hppeader from robot connection: P2OSPacket():Receive():read():");
           return 1;
@@ -110,13 +102,13 @@ int P2OSPacket::Receive(int fd)
 
       timestamp = ros::Time::now();
 
-      //GlobalTime->GetTimeDouble(&timestamp);
+      // GlobalTime->GetTimeDouble(&timestamp);
 
       prefix[0] = prefix[1];
       prefix[1] = prefix[2];
-      //skipped++;
+      // skipped++;
     }
-    //if (skipped>3) ROS_INFO("Skipped %d bytes\n", skipped);
+    // if (skipped>3) ROS_INFO("Skipped %d bytes\n", skipped);
 
     size = prefix[2] + 3;
     memcpy(packet, prefix, 3);
@@ -124,7 +116,8 @@ int P2OSPacket::Receive(int fd)
     cnt = 0;
     while (cnt != prefix[2]) {
       if ((cnt += read(fd, &packet[3 + cnt], prefix[2] - cnt)) < 0) {
-        ROS_ERROR("Error reading packet body from robot connection: P2OSPacket():Receive():read():");
+        ROS_ERROR(
+          "Error reading packet body from robot connection: P2OSPacket():Receive():read():");
         return 1;
       }
     }
@@ -134,7 +127,7 @@ int P2OSPacket::Receive(int fd)
 
 int P2OSPacket::Build(unsigned char * data, unsigned char datasize)
 {
-  short chksum;
+  int16_t chksum;
 
   size = datasize + 5;
 

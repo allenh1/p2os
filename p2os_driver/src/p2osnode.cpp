@@ -1,9 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     Hunter Allen, David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *     Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,10 +17,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- *
  */
-
-#include <iostream>
 
 #include <ros/ros.h>
 #include <geometry_msgs/Pose.h>
@@ -29,6 +25,8 @@
 #include <p2os_driver/p2os.hpp>
 #include <p2os_msgs/MotorState.h>
 #include <tf/transform_datatypes.h>
+
+#include <iostream>
 
 int main(int argc, char ** argv)
 {
@@ -74,7 +72,7 @@ int main(int argc, char ** argv)
   if (!p->Shutdown()) {
     ROS_WARN("p2os shutdown failed... your robot might be heading for the wall?");
   }
-  delete p;   //delete pointer
+  delete p;
 
   ROS_INFO("Quitting... ");
   return 0;

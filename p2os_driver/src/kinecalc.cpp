@@ -141,7 +141,8 @@ KineVector KineCalc::CalculateN(const EndEffector & pose)
   result.z = pose.o.x * pose.a.y - pose.a.x * pose.o.y;
   if (result.x == 0 && result.y == 0 && result.z == 0) {
     printf(
-      "P2OS: Approach and orientation cannot be the same vector - their cross product cannot be zero.\n");
+      "P2OS: Approach and orientation cannot be the same vector"
+      "- their cross product cannot be zero.\n");
     // Ensures that a different orientation vector is created
     KineVector orient;
     if (pose.a.y == 0 && pose.a.z == 0) {
@@ -235,9 +236,9 @@ bool KineCalc::CalculateIK(const EndEffector & fromPosition)
       break;
     }
     solutions[0][1] = temp + 2 * m1 * M_PI;
-    m1 += 1;              // So that within the 3 iterations we get m1 = -1, 0, 1
-  }       // Put a catchall here to prevent infinite loops by checking if m1 has gone past 1 (shouldn't happen)
-  while ((solutions[0][1] < -(M_PI) || solutions[0][1] > M_PI));      // && m1 < 1);
+    m1 += 1;  // So that within the 3 iterations we get m1 = -1, 0, 1
+  } while ((solutions[0][1] < -(M_PI) || solutions[0][1] > M_PI));  // && m1 < 1);
+  // Put a catchall here to prevent infinite loops by checking if m1 has gone past 1
   temp = (link2 * link2 + link4 * link4 - r * r - rz * rz) / (2 * link2 * link4);
   temp = fmin(fmax(temp, -1.0f), 1.0f);
   solutions[0][2] = M_PI - acos(temp);
@@ -283,8 +284,8 @@ bool KineCalc::CalculateIK(const EndEffector & fromPosition)
     }
     solutions[2][1] = temp + 2 * m1 * M_PI;
     m1 += 1;              // So that within the 3 iterations we get m1 = -1, 0, 1
-  }       // Put a catchall here to prevent infinite loops by checking if m1 has gone past 1 (shouldn't happen)
-  while ((solutions[2][1] < -(M_PI) || solutions[2][1] > M_PI));      // && m1 < 1);
+  } while ((solutions[2][1] < -(M_PI) || solutions[2][1] > M_PI));  // && m1 < 1);
+  // Put a catchall here to prevent infinite loops by checking if m1 has gone past 1
   temp = (link2 * link2 + link4 * link4 - r * r - rz * rz) / (2 * link2 * link4);
   temp = fmin(fmax(temp, -1.0f), 1.0f);
   solutions[2][2] = M_PI - acos(temp);
