@@ -20,6 +20,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include <p2os_driver/sip.hpp>
 
 #include <stdio.h>
 #include <limits.h>
@@ -28,10 +29,12 @@
 #include <stdlib.h> /* for abs() */
 #include <unistd.h>
 
-#include <p2os_driver/sip.hpp>
 #include <tf/tf.h>
 #include <tf/transform_datatypes.h>
+
+#include <memory>
 #include <sstream>
+#include <utility>
 
 void SIP::FillStandard(ros_p2os_data_t * data)
 {

@@ -25,6 +25,7 @@
 
 #include <climits>
 #include <cstdint>
+#include <memory>
 #include <string>
 
 typedef struct ArmJoint
@@ -131,7 +132,7 @@ public:
     }
   }
 
-  ~SIP(){}
+  ~SIP() {}
 };
 
 #endif  // P2OS_DRIVER__SIP_HPP_
