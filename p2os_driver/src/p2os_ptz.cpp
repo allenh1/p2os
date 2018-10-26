@@ -1,8 +1,7 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2000
- *     Tucker Hermans
- *
+ *  Copyright (C) 2000  Tucker Hermans
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
