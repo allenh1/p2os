@@ -1,8 +1,7 @@
-p2os
+p2os: [![Build Status](https://travis-ci.org/allenh1/p2os.svg?branch=master)](https://travis-ci.org/allenh1/p2os)
 ====
 
-P2OS driver for the Pioneer robots. This driver was originally written for Player/Stage by
-Brian Gerkey and is now maintained for ROS.
+P2OS driver for the Pioneer robots. This driver was originally written for Player/Stage by Brian Gerkey.
 
 p2os_driver
 -----------
