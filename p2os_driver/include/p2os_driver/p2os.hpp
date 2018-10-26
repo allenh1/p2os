@@ -156,7 +156,7 @@ protected:
   bool psos_use_tcp;
   int psos_tcp_port;
   bool vel_dirty, motor_dirty;
-  bool gripper_dirty_;
+  bool gripper_dirty_ = false;
   int param_idx;
   // PID settings
   int rot_kp, rot_kv, rot_ki, trans_kp, trans_kv, trans_ki;
