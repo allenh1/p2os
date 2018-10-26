@@ -1,9 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy, 
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
- *
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,20 +19,21 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  */
-
-
-#ifndef _PACKET_H
-#define _PACKET_H
-
-#include <string.h>
+#ifndef P2OS_DRIVER__PACKET_HPP_
+#define P2OS_DRIVER__PACKET_HPP_
 #include <ros/ros.h>
 
-#define PACKET_LEN 256
+#include <cstring>
 
-class P2OSPacket 
+namespace
 {
- public:
-  unsigned char packet[PACKET_LEN];
+constexpr size_t packet_len = 256;
+}
+
+class P2OSPacket
+{
+public:
+  unsigned char packet[packet_len];
   unsigned char size;
   ros::Time timestamp;
 
@@ -41,18 +41,19 @@ class P2OSPacket
 
   void Print();
   void PrintHex();
-  int Build( unsigned char *data, unsigned char datasize );
-  int Send( int fd );
-  int Receive( int fd );
+  int Build(unsigned char * data, unsigned char datasize);
+  int Send(int fd);
+  int Receive(int fd);
   bool Check();
-  
-  bool operator!= ( P2OSPacket p ) {
-    if ( size != p.size) return(true);
 
-    if ( memcmp( packet, p.packet, size ) != 0 ) return (true);
+  bool operator!=(P2OSPacket p)
+  {
+    if (size != p.size) {return true;}
 
-    return(false);
+    if (memcmp(packet, p.packet, size) != 0) {return true;}
+
+    return false;
   }
 };
 
-#endif
+#endif  // P2OS_DRIVER__PACKET_HPP_

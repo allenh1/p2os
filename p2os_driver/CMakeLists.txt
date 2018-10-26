@@ -1,5 +1,13 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.9.5)
 project(p2os_driver)
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra)
+endif()
 
 find_package(catkin REQUIRED COMPONENTS
   p2os_msgs
@@ -25,12 +33,12 @@ include_directories(include
 
 ## Declare a cpp executable
 add_executable(p2os_driver
-  src/p2osnode.cc
-  src/p2os.cc
-  src/kinecalc.cc
-  src/packet.cc
-  src/robot_params.cc
-  src/sip.cc
+  src/p2osnode.cpp
+  src/p2os.cpp
+  src/kinecalc.cpp
+  src/packet.cpp
+  src/robot_params.cpp
+  src/sip.cpp
   src/p2os_ptz.cpp
 )
 

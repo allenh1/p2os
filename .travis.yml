@@ -1,0 +1,18 @@
+dist: trusty
+sudo: required
+language: python
+services: docker
+python:
+  - "3.5"
+before_install:
+  - pip install --upgrade pip
+  - pip install setuptools
+  - pip install docker
+# command to install dependencies
+install:
+  - cd ../ && git clone https://github.com/ros-infrastructure/superflore
+  - cd superflore && python ./setup.py install
+  - cd ../p2os/tests
+# command to run tests
+script:
+  - python ./test.py
