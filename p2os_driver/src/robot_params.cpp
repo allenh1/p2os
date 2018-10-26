@@ -1,8 +1,8 @@
 /*
  *  P2OS for ROS
- *  Copyright (C) 2009
- *     David Feil-Seifer, Brian Gerkey, Kasper Stoy,
+ *  Copyright (C) 2009  David Feil-Seifer, Brian Gerkey, Kasper Stoy,
  *      Richard Vaughan, & Andrew Howard
+ *  Copyright (C) 2018  Hunter L. Allen
  *
  *
  *  This program is free software; you can redistribute it and/or modify

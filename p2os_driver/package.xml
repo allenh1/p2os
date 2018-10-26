@@ -5,7 +5,7 @@
   <version>2.1.1</version>
   <description>Driver file descriptions for P2OS/ARCOS robot</description>
 
-  <license>BSD</license>
+  <license>GPL-2.0</license>
 
   <url type="website">http://ros.org/wiki/p2os_driver</url>
   <url type="bugtracker">https://github.com/allenh1/p2os/issues/</url>
