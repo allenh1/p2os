@@ -15,7 +15,7 @@
 				 iyy="0.4783" iyz="0.0"
 				 izz="0.3338"/>
 		</inertial>
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0.177" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p2os_urdf/meshes/p3at_meshes/chassis.stl"/>
@@ -44,7 +44,7 @@
 				 iyy="1.0" iyz="0.0"
  				izz="1.0"/>
 		</inertial>
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p2os_urdf/meshes/p3at_meshes/top.stl"/>
@@ -77,7 +77,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
 		</inertial>
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p2os_urdf/meshes/p3at_meshes/front_sonar.stl"/>
@@ -110,7 +110,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
 		</inertial>
-		<visual name="base_visual">
+		<visual>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
 				<mesh filename="package://p2os_urdf/meshes/p3at_meshes/back_sonar.stl"/>
@@ -145,7 +145,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/axle.stl"/>
@@ -178,7 +178,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
@@ -211,7 +211,7 @@
 			<inertia ixx="0.012411765597" ixy="0" ixz="0"
          iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
       </inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
@@ -251,7 +251,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/axle.stl"/>
@@ -285,7 +285,7 @@
 			<inertia ixx="1.0" ixy="0.0" ixz="0.0"
 				 iyy="1.0" iyz="0.0" izz="1.0"/>
   	 	</inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
@@ -316,7 +316,7 @@
 			<inertia ixx="0.012411765597" ixy="0" ixz="0"
          iyy="0.015218160428" iyz="0" izz="0.011763977943"/>
       </inertial>
-	<visual name="base_visual">
+	<visual>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
 			<mesh filename="package://p2os_urdf/meshes/p3at_meshes/wheel.stl"/>
