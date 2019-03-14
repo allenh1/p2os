@@ -2,8 +2,8 @@
 Changelog for package p2os_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2019-03-14)
+------------------
 * Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
 * Fixed color in gazebo with 3at. (`#57 <https://github.com/allenh1/p2os/issues/57>`_)
 * Contributors: Alberto, Hunter L. Allen

@@ -2,8 +2,8 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2019-03-14)
+------------------
 * Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
 * Fix driver license (`#56 <https://github.com/allenh1/p2os/issues/56>`_)
   * Upon further inspection, this p2os_driver is GPL 2
