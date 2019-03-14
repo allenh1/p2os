@@ -2,6 +2,28 @@
 Changelog for package p2os_driver
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.0 (2019-03-14)
+------------------
+* Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
+* Fix driver license (`#56 <https://github.com/allenh1/p2os/issues/56>`_)
+  * Upon further inspection, this p2os_driver is GPL 2
+  * Fix kinecalc license line
+  * Update p2os_ptz license
+  * Fix robot_params license
+* Add CI (`#54 <https://github.com/allenh1/p2os/issues/54>`_)
+  * Add .travis.yml
+  * Add .gitignore
+  * Add test script
+  * Rename *.h to *.hpp
+  * Rename *.cc to *.cpp
+  * Apply change to CMakeLists.txt
+  * Fix copyright line(s), as well as fix header guard style
+  * Default standard to C++14, and bump CMake minimum to 3.9.5
+  * Remove unused boost include
+  * Make headers pass CI
+  * Add build status to the README
+* Contributors: Hunter L. Allen
+
 2.1.1 (2018-07-03)
 ------------------
 
