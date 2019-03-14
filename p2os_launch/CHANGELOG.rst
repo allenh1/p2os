@@ -2,6 +2,11 @@
 Changelog for package p2os_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
+* Contributors: Hunter L. Allen
+
 2.1.1 (2018-07-03)
 ------------------
 
