@@ -7,7 +7,7 @@
     Contains the Documentation for the p2os driver/componenets
   </description>
 
-  <maintainer email="hunter@openrobotics.org">Hunter L. Allen</maintainer>
+  <maintainer email="hallen@kns.com">Hunter L. Allen</maintainer>
 
   <license>BSD</license>
 
@@ -16,7 +16,7 @@
   <url type="repository">https://github.com/allenh1/p2os/</url>
 
   
-  <author email="hunter@openrobotics.org">Hunter L. Allen</author>
+  <author email="hallen@kns.com">Hunter L. Allen</author>
   <author email="dfseifer@usc.edu">David Feil-Seifer</author>
   <author email="asynodin@mech.upatras.gr">Aris Synodinos</author>
   <author>Brian Gerkey</author>

@@ -10,9 +10,9 @@
   <url type="bugtracker">https://github.com/allenh1/p2os/issues</url>
   <url type="repository">https://github.com/allenh1/p2os/</url>
 
-  <maintainer email="hunter@openrobotics.org">Hunter L. Allen</maintainer>
+  <maintainer email="hallen@kns.com">Hunter L. Allen</maintainer>
 
-  <author email="hunter@openrobotics.org">Hunter L. Allen</author>
+  <author email="hallen@kns.com">Hunter L. Allen</author>
   <author email="dfseifer@usc.edu">David Feil-Seifer</author>
   <author>Brian Gerkey</author>
   <author>Kasper Stoy</author>
