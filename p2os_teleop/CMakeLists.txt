@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.9.5)
 project(p2os_teleop)
 
 find_package(catkin REQUIRED COMPONENTS geometry_msgs std_msgs sensor_msgs tf)

@@ -43,7 +43,6 @@ add_executable(p2os_driver
 )
 
 target_link_libraries(p2os_driver ${catkin_LIBRARIES})
-add_dependencies(p2os_driver p2os_msgs_gencpp)
 
 ## Mark executables and/or libraries for installation
 install(TARGETS p2os_driver
