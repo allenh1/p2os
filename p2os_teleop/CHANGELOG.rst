@@ -7,8 +7,8 @@ Changelog for package p2os_teleop
 * Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
 * Contributors: Hunter L. Allen
 
-Forthcoming
------------
+2.2.1 (2020-06-18)
+------------------
 * Two fixes for Melodic. (`#62 <https://github.com/allenh1/p2os/issues/62>`_)
   In p2os_driver, the p2os_msgs_gencpp doesn't exist (and, as
   far as I can tell, never existed).  It worked up until recently
