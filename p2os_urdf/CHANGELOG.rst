@@ -8,6 +8,15 @@ Changelog for package p2os_urdf
 * Fixed color in gazebo with 3at. (`#57 <https://github.com/allenh1/p2os/issues/57>`_)
 * Contributors: Alberto, Hunter L. Allen
 
+2.2.1 (2020-06-18)
+------------------
+* Prepare release 2.2.0 (`#59 <https://github.com/allenh1/p2os/issues/59>`_)
+  * Update changelog
+  * 2.2.0
+* Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
+* Fixed color in gazebo with 3at. (`#57 <https://github.com/allenh1/p2os/issues/57>`_)
+* Contributors: Alberto, Hunter L. Allen
+
 2.1.1 (2018-07-03)
 ------------------
 * Kill it with fire (`#50 <https://github.com/allenh1/p2os/issues/50>`_)

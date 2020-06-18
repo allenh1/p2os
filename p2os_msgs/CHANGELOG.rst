@@ -7,6 +7,14 @@ Changelog for package p2os_msgs
 * Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
 * Contributors: Hunter L. Allen
 
+2.2.1 (2020-06-18)
+------------------
+* Prepare release 2.2.0 (`#59 <https://github.com/allenh1/p2os/issues/59>`_)
+  * Update changelog
+  * 2.2.0
+* Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
+* Contributors: Hunter L. Allen
+
 2.1.1 (2018-07-03)
 ------------------
 

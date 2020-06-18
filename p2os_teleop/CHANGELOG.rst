@@ -7,6 +7,24 @@ Changelog for package p2os_teleop
 * Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
 * Contributors: Hunter L. Allen
 
+2.2.1 (2020-06-18)
+------------------
+* Two fixes for Melodic. (`#62 <https://github.com/allenh1/p2os/issues/62>`_)
+  In p2os_driver, the p2os_msgs_gencpp doesn't exist (and, as
+  far as I can tell, never existed).  It worked up until recently
+  because older versions of CMake would complain but not fail,
+  while more recent cmake versions actually fail.  Just remove
+  the dependency.
+  The second fix is a cosmetic issue, where CMake would spew a
+  bunch of warnings on the command line.  Increase the version
+  to 3.9.5 to match other CMakeLists.txt and to get rid of the
+  warnings.
+* Prepare release 2.2.0 (`#59 <https://github.com/allenh1/p2os/issues/59>`_)
+  * Update changelog
+  * 2.2.0
+* Update email address (`#58 <https://github.com/allenh1/p2os/issues/58>`_)
+* Contributors: Chris Lalancette, Hunter L. Allen
+
 2.1.1 (2018-07-03)
 ------------------
 
