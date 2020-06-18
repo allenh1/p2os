@@ -39,7 +39,7 @@ def set_up_container():
 
 def test_ament_uncrustify(container, subdir, auto_fix=False, verbose=False):
     container.add_bash_command('cd %s/%s' % (repo_location, subdir))
-    container.add_bash_command('source /opt/ros/bouncy/setup.bash')
+    container.add_bash_command('source /opt/ros/dashing/setup.bash')
     fix = ''
     if auto_fix:
         fix = "--reformat "
@@ -59,7 +59,7 @@ def test_ament_uncrustify(container, subdir, auto_fix=False, verbose=False):
 
 def test_ament_cppcheck(container, subdir, verbose=False):
     container.add_bash_command('cd %s/%s' % (repo_location, subdir))
-    container.add_bash_command('source /opt/ros/bouncy/setup.bash')
+    container.add_bash_command('source /opt/ros/dashing/setup.bash')
     container.add_bash_command('ament_cppcheck src include test')
     try:
         container.run(show_cmd=verbose)
@@ -76,7 +76,7 @@ def test_ament_cppcheck(container, subdir, verbose=False):
 
 def test_ament_cpplint(container, subdir, verbose=False):
     container.add_bash_command('cd %s/%s' % (repo_location, subdir))
-    container.add_bash_command('source /opt/ros/bouncy/setup.bash')
+    container.add_bash_command('source /opt/ros/dashing/setup.bash')
     container.add_bash_command('ament_cpplint src include test')
     try:
         container.run(show_cmd=verbose)
