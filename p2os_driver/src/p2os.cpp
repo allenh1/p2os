@@ -721,7 +721,7 @@ int P2OSNode::SendReceive(P2OSPacket * pkt, bool publish_data)
       if (ptz_.isOn()) {
         int len = packet.packet[2] - 3;
         if (ptz_.cb_.gotPacket()) {
-          ROS_ERROR("PTZ got a message, but alread has the complete packet.");
+          ROS_ERROR("PTZ got a message, but already has the complete packet.");
         } else {
           for (int i = 4; i < 4 + len; ++i) {
             ptz_.cb_.putOnBuf(packet.packet[i]);
