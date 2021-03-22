@@ -41,7 +41,7 @@ add_executable(p2os_driver
   src/sip.cpp
   src/p2os_ptz.cpp
 )
-
+add_dependencies( p2os_driver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(p2os_driver ${catkin_LIBRARIES})
 
 ## Mark executables and/or libraries for installation
